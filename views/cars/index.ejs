@@ -1,0 +1,15 @@
+<h2>Search cars</h2>
+<form action='/cars' method='GET'>
+    <label>Name</label>
+    <input type='text' name='name' value="<%= searchOptions.name %>">
+    <button type='submit '>Search</button>
+</form>
+
+<br>
+
+<% cars.forEach(car=> { %>
+    <div>
+        <%= car.name %>
+    </div>
+
+    <% }) %>
