@@ -36,14 +36,13 @@ body {
   top: 95%;
   left: 25%;
 
-  margin-right: 4rem;
   align-items: center;
 
   justify-content: center;
 }
 
 .info {
-  padding-top: 10rem;
+  padding-top: 15rem;
   position: center;
 }
 
