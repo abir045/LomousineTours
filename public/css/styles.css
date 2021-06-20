@@ -41,3 +41,21 @@ body {
 
   justify-content: center;
 }
+
+.info {
+  padding-top: 10rem;
+  position: center;
+}
+
+.offers {
+  color: #fd7e14;
+}
+
+.card:hover {
+  color: #fd7e14 !important ;
+  text-decoration: underline;
+}
+
+.card-text {
+  color: grey;
+}
