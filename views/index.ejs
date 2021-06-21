@@ -28,7 +28,7 @@
 </div>
 
 
-<div class="card details mb-3" style="max-height:500px;">
+<div class="card details mb-3" style="max-height:600px;">
     <div class="row g-0">
         <div class="col-md">
             <img src="/images/limo12.jpg" style="max-width:400px;" alt="...">
@@ -37,7 +37,7 @@
             <div class="card-body">
 
                 <form>
-                    <div class="row mb-3">
+                    <div class="row mb-1 mt-5">
                         <div class="col-md">
                             <label for="yourname" class="form-label">your Name</label>
                             <input type='text' name='fullname' value="" id='fullname'
@@ -66,7 +66,7 @@
                             <input type='text' name='end-destination' value="" id='end-destination'
                                 class="form-control border-top-0">
                         </div>
-
+                       
 
                     </div>
 
@@ -84,6 +84,10 @@
                                 class="form-control border-top-0">
                         </div>
                     </div>
+                    <div>
+                    <button class="btn btn-info" type='submit'>Book Now</button>
+                    </div>
+                    
                 </form>
             </div>
         </div>
@@ -161,6 +165,12 @@
 </div>
 
 
+<h1 class="text-center pt-5">Our vehicles</h1>
+<% limos.forEach(limo=> { %>
+    <img height='600' width='400' src="<%= limo.coverImagePath %>"" >
+
+    <% }) %>
 
 
 </div>
+

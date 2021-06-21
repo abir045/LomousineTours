@@ -1,22 +1,83 @@
 const express = require("express");
 const { route } = require(".");
+const multer = require("multer");
+const path = require("path");
+const fs = require("fs");
+const Limo = require("../models/limo");
+const uploadPath = path.join("public", Limo.coverImageBasePath);
+const imageMimeTypes = ["image/jpeg", "image/png", "image/gif"];
 const router = express.Router();
-const limo = require("../models/limo");
+const upload = multer({
+  dest: uploadPath,
+  fileFilter: (req, file, callback) => {
+    callback(null, imageMimeTypes.includes(file.mimetype));
+  },
+});
 
 //all limo route
 router.get("/", async (req, res) => {
-  res.send("all limos");
+  let query = Limo.find();
+  if (req.query.title != null && req.query.title != "") {
+    query = query.regex("title", new RegExp(req.query.title, "i"));
+  }
+  try {
+    const limos = await query.exec();
+    //await Limo.find({});
+    res.render("limos/index", {
+      limos: limos,
+      searchOptions: req.query,
+    });
+  } catch {
+    res.redirect("/");
+  }
 });
 
 //new limo route
 
-router.get("/new", (req, res) => {
-  res.send("new limo");
+router.get("/new", async (req, res) => {
+  renderNewPage(res, new Limo());
 });
 
 //create limo route
-router.post("/", async (req, res) => {
-  res.send("create limo");
+router.post("/", upload.single("cover"), async (req, res) => {
+  const fileName = req.file != null ? req.file.filename : null;
+  const limo = new Limo({
+    title: req.body.title,
+    pricePerHour: req.body.pricePerHour,
+    pricePerDay: req.body.pricePerDay,
+    airportTransfer: req.body.airportTransfer,
+    coverImageName: fileName,
+    description: req.body.description,
+  });
+
+  try {
+    const newLimo = await limo.save();
+    //res.redirect(`limos/${newLimo.id}`)
+    res.redirect("limos");
+  } catch {
+    if (limo.coverImageName != null) {
+      removeLimoCover(limo.coverImageName);
+    }
+    renderNewPage(res, limo, true);
+  }
 });
+
+function removeLimoCover(fileName) {
+  fs.unlink(path.join(uploadPath, fileName), (err) => {
+    if (err) console.error(err);
+  });
+}
+
+function renderNewPage(res, limo, hasError = false) {
+  try {
+    const params = {
+      limo: limo,
+    };
+    if (hasError) params.errorMessage = "Error creating Limo";
+    res.render("limos/new", params);
+  } catch {
+    res.redirect("/limos");
+  }
+}
 
 module.exports = router;

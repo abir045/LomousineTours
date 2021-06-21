@@ -1,0 +1,18 @@
+<h2>Search Limousines</h2>
+<form action='/limos' method='GET'>
+    <div>
+        <label>Title</label>
+        <input type='text' name='title' value="<%= searchOptions.title %>">
+
+    </div>
+   
+   
+    <button type='submit'>Search</button>
+</form>
+
+<br>
+
+<% limos.forEach(limo => { %>
+   <img height='600' width='400' src="<%= limo.coverImagePath %>"" >
+
+    <% }) %>
