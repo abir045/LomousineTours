@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const path = require("path");
-const coverImageBasePath = "uploads/bookCovers";
+//const path = require("path");
+//const coverImageBasePath = "uploads/bookCovers";
 
 const limoSchema = new mongoose.Schema({
   title: {
@@ -24,17 +24,23 @@ const limoSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  coverImageName: {
+  coverImage: {
+    type: Buffer,
+    required: true,
+  },
+  coverImageType: {
     type: String,
     required: true,
   },
 });
 
 limoSchema.virtual("coverImagePath").get(function () {
-  if (this.coverImageName != null) {
-    return path.join("/", coverImageBasePath, this.coverImageName);
+  if (this.coverImage != null && this.coverImageType != null) {
+    //return path.join("/", coverImageBasePath, this.coverImageName);
+    return `data:${this.coverImageType};charset=utf-8;base64,
+    ${this.coverImage.toString("base64")}`;
   }
 });
 
 module.exports = mongoose.model("Limo", limoSchema);
-module.exports.coverImageBasePath = coverImageBasePath;
+//module.exports.coverImageBasePath = coverImageBasePath;
