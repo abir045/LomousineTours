@@ -1,15 +1,19 @@
 <link rel="stylesheet" href="css/limos.css">
 
+<div class="container">
 <h2>Search Limousines</h2>
 <form action='/limos' method='GET'>
     <div>
-        <label>Title</label>
+        <label class="pb-3">Title</label>
+        
+        
+        
         <input type='text' name='title' value="<%= searchOptions.title %>">
 
     </div>
    
-   
-    <button type='submit'>Search</button>
+   <div> <button  class="btn btn-info" type='submit'>Search</button></div>
+    
 </form>
 
 <br>
@@ -37,3 +41,5 @@
    <!-- <img height='600' width='400' src="<%= limo.coverImagePath %>"" > -->
 
     <% }) %>
+
+    </div>
