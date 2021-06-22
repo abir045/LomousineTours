@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="css/limos.css">
+
 <h2>Search Limousines</h2>
 <form action='/limos' method='GET'>
     <div>
@@ -13,6 +15,25 @@
 <br>
 
 <% limos.forEach(limo => { %>
-   <img height='600' width='400' src="<%= limo.coverImagePath %>"" >
+
+    <div class="card vehicles" style="width: 18rem;">
+        <img src="<%= limo.coverImagePath %>" height='200' width='400' class="card-img float-left" alt="...">
+        <div class="card-body">
+            <h5 class="card-title text-center">
+                <%= limo.title %>
+            </h5>
+            <p class="card-text ">
+                
+                    <h6 class="text-center">Price Per Hour: <%= limo.pricePerHour %>$</h6>
+                    <h6 class="text-center">Price Per Day: <%= limo.pricePerDay %>$</h6>
+                    <h6 class="text-center">Airport Transfer: <%= limo.airportTransfer %>$</h6>
+            </p>
+    
+    
+        </div>
+    </div>
+
+
+   <!-- <img height='600' width='400' src="<%= limo.coverImagePath %>"" > -->
 
     <% }) %>

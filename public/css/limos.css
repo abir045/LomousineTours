@@ -1,0 +1,5 @@
+.vehicles {
+  margin: 0 auto; /* Added */
+  float: left; /* Added */
+  margin-bottom: 10px; /* Added */
+}

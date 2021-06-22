@@ -165,12 +165,31 @@
 </div>
 
 
-<h1 class="text-center pt-5">Our vehicles</h1>
-<% limos.forEach(limo=> { %>
-    <img height='600' width='400' src="<%= limo.coverImagePath %>"" >
 
-    <% }) %>
 
 
 </div>
+
+<h1 class="text-center pt-5">Our vehicles</h1>
+<% limos.forEach(limo=> { %>
+    
+    <div class="card vehicles" style="width: 18rem;">
+        <img src="<%= limo.coverImagePath %>" height='200' width='400' class="card-img float-left" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">
+                <%= limo.title %>
+            </h5>
+           
+           
+         
+        </div>
+    </div>
+    
+
+
+    <!-- <img height='600' width='400' > -->
+    <!-- <h3></h3> -->
+
+    <% }) %>
+
 
