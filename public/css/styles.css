@@ -71,8 +71,10 @@ body {
 }
 
 .calculator {
-  background-color: gainsboro;
   align-items: center;
   justify-content: center;
   z-index: 4;
+}
+input:focus {
+  outline: none;
 }

@@ -2,86 +2,90 @@
 
 
 <div class="container-fluid calculator">
-
-    <form  class="form-floating" action="">
-        <div class="row g-0">
-            <div class="col-md-3">
-                <div class="form-floating">
-                    <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                        <option selected> Toronto Pearson Airport</option>
-                        <option value="Pickup: Toronto Pearson Airport">Pickup: Toronto Pearson Airport</option>
-                        <option value="Drop off: Toronto Pearson Airport">Drop off: Toronto Pearson Airport</option>
-                        <option value="Other (Destinations)">Other</option>
-                    </select>
-
-                    <label class="fw-bold fs-5" for="floatingInputGrid"> Select Direction</label>
+    <div class="bg-secondary">
+        <h1 >Instant Calculator</h1>
+        <form class="form-floating" action="">
+            <div class="row g-0 bg-secondary">
+                <div class="col-md-3 ">
+                    <div class="form-floating ">
+                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                            <option selected> Toronto Pearson Airport</option>
+                            <option value="Pickup: Toronto Pearson Airport">Pickup: Toronto Pearson Airport</option>
+                            <option value="Drop off: Toronto Pearson Airport">Drop off: Toronto Pearson Airport</option>
+                            <option value="Other (Destinations)">Other</option>
+                        </select>
+        
+                        <label class="fw-bold fs-5" for="floatingInputGrid"> Select Direction</label>
+                    </div>
                 </div>
+                <div class="col-md-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="">
+                        <label class="fw-bold fs-5" for="floatingInputGrid">Drop off Destination</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                            <option selected>One</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <label class="fw-bold fs-5" for="floatingSelectGrid">People</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                            <option selected>1</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+        
+                        </select>
+                        <label class="fw-bold fs-5" for="floatingSelectGrid">Bags</label>
+                    </div>
+        
+                </div>
+        
+                <div class="col-md-2">
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                            <option selected>Sedan</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Van">Van</option>
+                            <option value="Large SUV">Large SUV</option>
+                            <option value="Large Van">Large Van</option>
+        
+                        </select>
+                        <label class="fw-bold fs-5" for="floatingSelectGrid">Limo Type</label>
+                    </div>
+                </div>
+        
+                <!-- <div class="col-md">
+                        <div class="form-floating">
+                            <button type='submit' class='btn btn-info'>Book</button>
+                        </div>
+                    </div> -->
             </div>
-            <div class="col-md-3">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="">
-                    <label class="fw-bold fs-5" for="floatingInputGrid">Drop off Destination</label>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="form-floating">
-                    <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                        <option selected>One</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                    <label class="fw-bold fs-5" for="floatingSelectGrid">People</label>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="form-floating">
-                    <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                        <option selected>1</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-
-                    </select>
-                    <label class="fw-bold fs-5" for="floatingSelectGrid">Bags</label>
-                </div>
-
-            </div>
-
-            <div class="col-md-2">
-                <div class="form-floating">
-                    <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                        <option selected>Sedan</option>
-                        <option value="Sedan">Sedan</option>
-                        <option value="SUV">SUV</option>
-                        <option value="Van">Van</option>
-                        <option value="Large SUV">Large SUV</option>
-                        <option value="Large Van">Large Van</option>
-
-                    </select>
-                    <label class="fw-bold fs-5" for="floatingSelectGrid">Limo Type</label>
-                </div>
-            </div>
-
-            <!-- <div class="col-md">
-                <div class="form-floating">
-                    <button type='submit' class='btn btn-info'>Book</button>
-                </div>
-            </div> -->
-        </div>
-    </form>
+        </form>
+    </div>
+        
+    
 </div>
 
 
