@@ -10,7 +10,7 @@ a:hover {
 .nav-link {
   padding-right: 1rem;
   /* padding-left: 2rem; */
-  color: #000000;
+  color: white;
   font-weight: bold;
 }
 
@@ -20,6 +20,16 @@ a:hover {
   text-decoration: none;
   font-weight: bold;
   padding-right: 7rem;
+}
+
+.dropdown-item {
+  color: azure;
+  background-color: black;
+}
+
+.navbar-text {
+  padding-right: 3rem;
+  font-style: italic;
 }
 
 .logo {

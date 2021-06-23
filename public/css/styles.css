@@ -1,16 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
   font-family: "Poppins", sans-serif;
 }
 
 .heading {
   z-index: 4;
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 35%;
   color: white;
   font-weight: bold;
@@ -21,7 +25,7 @@ body {
 } */
 
 .services {
-  z-index: 4;
+  z-index: 9;
   position: absolute;
   top: 30%;
   left: 40%;
@@ -30,19 +34,20 @@ body {
   font-weight: bold;
 }
 
-.details {
-  z-index: 4;
-  position: absolute;
-  top: 95%;
-  left: 25%;
-
-  align-items: center;
-
+.form-input {
+  display: flex;
   justify-content: center;
 }
 
+.details {
+  display: flex;
+
+  z-index: 9;
+  position: absolute;
+  top: 90%;
+}
+
 .info {
-  padding-top: 15rem;
   position: center;
 }
 
@@ -63,4 +68,11 @@ body {
   margin: 0 auto; /* Added */
   float: left; /* Added */
   margin-bottom: 10px; /* Added */
+}
+
+.calculator {
+  background-color: gainsboro;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
 }
