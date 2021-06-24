@@ -87,3 +87,14 @@ body {
   bottom: 40px;
   right: 20px;
 }
+
+.time {
+  color: orange;
+}
+hr {
+  height: 20px;
+  width: 60%;
+  margin: auto;
+
+  border: 3px solid white;
+}
