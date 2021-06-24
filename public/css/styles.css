@@ -12,12 +12,7 @@ body {
 }
 
 .heading {
-  z-index: 4;
-  position: absolute;
-  top: 25%;
-  left: 35%;
-  color: white;
-  font-weight: bold;
+  background-color: #282829;
 }
 
 /* .bg {
