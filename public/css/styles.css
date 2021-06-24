@@ -78,13 +78,13 @@ body {
 
 .promise {
   position: relative;
-  top: 10%;
+  top: 5%;
 }
 
 .whatsapp {
   position: fixed;
-  bottom: 40px;
-  right: 20px;
+  top: 30px;
+  right: 70px;
 }
 
 .time {
