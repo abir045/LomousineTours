@@ -6,210 +6,279 @@
 
 </div>
 
-<div class="container-fluid calculator">
-    <div class="bg-secondary">
-        <h1 >Instant Calculator</h1>
-        <form class="form-floating" action="">
-            <div class="row g-0 bg-secondary">
-                <div class="col-md-3 ">
-                    <div class="form-floating ">
-                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                            <option selected>Pickup: Toronto Pearson Airport</option>
-                            
-                            <option value="Drop off: Toronto Pearson Airport">Drop off: Toronto Pearson Airport</option>
-                            <option value="Other (Destinations)">Other</option>
-                        </select>
-        
-                        <label class="fw-bold fs-5" for="floatingInputGrid"> Select Direction</label>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="">
-                        <label class="fw-bold fs-5" for="floatingInputGrid">Drop off Destination</label>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="form-floating">
-                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                            <option selected>1</option>
-                            
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                        </select>
-                        <label class="fw-bold fs-5" for="floatingSelectGrid">People</label>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="form-floating">
-                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                            <option selected>1</option>
-                            
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-        
-                        </select>
-                        <label class="fw-bold fs-5" for="floatingSelectGrid">Bags</label>
-                    </div>
-        
-                </div>
-        
-                <div class="col-md-2">
-                    <div class="form-floating">
-                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                            <option selected>Sedan</option>
-                            
-                            <option value="SUV">SUV</option>
-                            <option value="Van">Van</option>
-                            <option value="Large SUV">Large SUV</option>
-                            <option value="Large Van">Large Van</option>
-        
-                        </select>
-                        <label class="fw-bold fs-5" for="floatingSelectGrid">Limo Type</label>
-                    </div>
-                </div>
-        
-                <!-- <div class="col-md">
-                        <div class="form-floating">
-                            <button type='submit' class='btn btn-info'>Book</button>
-                        </div>
-                    </div> -->
-            </div>
-        </form>
-    </div>
-        
+<div class="container-fluid">
+
+    <div class="container-fluid calculator">
+        <div class="bg-secondary">
+            <h1>Instant Calculator</h1>
+            <form class="form-floating" action="">
+                <div class="row g-0 bg-secondary">
+                    <div class="col-md-3 ">
+                        <div class="form-floating ">
+                            <!-- <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                <option selected>Pickup: Toronto Pearson Airport</option>
     
-</div>
+                                <option value="Drop off: Toronto Pearson Airport">Drop off: Toronto Pearson Airport</option>
+                                <option value="Other (Destinations)">
+                                <input type='text' id='floatingInputGrid' placeholder="" class='form-control'>
+                                </option>
+                            </select> -->
+                            <input type='text' id='from'  placeholder="From" class='form-control' value="">
+                       
+    
+                            <label class="fw-bold fs-5" id='details' for="floatingInputGrid"> Select Direction</label>
+
+                            
+                            
+                        </div>
+                    </div>
 
 
-
-<div class="container-fluid covers">
-
-    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="img-fluid" src="/images/limo24.jpg"  class="d-block h-100 " alt="...">
-            </div>
-            <div class="carousel-item">
-                <img class='img-fluid' src="/images/limo28.jpg"   class="d-block h-100 " alt="...">
-            </div>
-            <div class="carousel-item">
-                <img class='img-fluid' src="/images/limo26.jpg"   class="d-block h-100 " alt="...">
+                    <div class="col-md-3">
+                        <div class="form-floating">
+                            <input type="text" id='to'  placeholder="Destination" class="form-control"  value="">
+                            <label class="fw-bold fs-5" for="floatingInputGrid">Drop off Destination</label>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                <option selected>1</option>
+    
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                            <label class="fw-bold fs-5" for="floatingSelectGrid">People</label>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                <option selected>1</option>
+    
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+    
+                            </select>
+                            <label class="fw-bold fs-5" for="floatingSelectGrid">Bags</label>
+                        </div>
+    
+                    </div>
+    
+                    <div class="col-md-2">
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                <option selected>Sedan</option>
+    
+                                <option value="SUV">SUV</option>
+                                <option value="Van">Van</option>
+                                <option value="Large SUV">Large SUV</option>
+                                <option value="Large Van">Large Van</option>
+    
+                            </select>
+                            <label class="fw-bold fs-5" for="floatingSelectGrid">Limo Type</label>
+                        </div>
+                    </div>
+    
+                    <!-- <div class="col-md">
+                            <div class="form-floating">
+                                <button type='submit' class='btn btn-info'>Book</button>
+                            </div>
+                        </div> -->
+                </div>
+            </form>
+        </div>
+    
+    
+    </div>
+    
+    
+    
+    <div class="container-fluid covers">
+    
+        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="img-fluid" src="/images/limo24.jpg" class="d-block h-100 " alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img class='img-fluid' src="/images/limo28.jpg" class="d-block h-100 " alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img class='img-fluid' src="/images/limo26.jpg" class="d-block h-100 " alt="...">
+                </div>
             </div>
         </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <div class="container-fluid  ">
+    
+        <div class="heading">
+            <h3 class=" fw-bold text-center text-white text-uppercase">Welcome To Limousine Tours</h3>
+        </div>
+        <div class="card bg-dark text-white">
+            <img src="/images/promise5.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay">
+                <h3 class="card-title  text-uppercase text-center ">Our Promise</h3>
+    
+    
+                <p class="card-text text-white text-center fs-6 promise">
+                    LimoTours is committed to providing you with an unforgettable limousine experience.
+                    We dedicate ourselves in managing our limo fleet and team of professional chauffeurs to support you with
+                    the best traveling experience throughout
+                    the Greater Toronto and Surrounding areas.
+                </p>
+    
+            </div>
+        </div>
+    
+        <div>
+    
+            <h3 class="text-center text-uppercase ">Who <strong class="time">We</strong> Are</h3>
+            <p class="text-center fs-6 ">Our Service Specializes in: </p>
+        </div>
+    
+    
+    
+    
+        <div class="card bg-dark text-white pt-5">
+            <img src="/images/whoweare.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay">
+    
+                <hr>
+    
+                <h3 class="card-text time text-center ">
+                    Always On Time</h3>
+                <p class=" card-text text-white text-center  ">
+                    "Your driver always arrives early and
+                    up arrival you will get a text message
+                    notifying you that your driver has arrived
+                    and you can also track your driver."</p>
+                <hr>
+    
+    
+    
+    
+                <h3 class="card-text time text-center   ">
+                    Hassle Free </h3>
+                <p class=" card-text text-white text-center  ">
+                    "We offer hassle free service either you are going
+                    to the airport or being picked up from the airport or
+                    any We track and
+                    monitor all flights for any arrival related changes"
+    
+                </p>
+                <hr>
+    
+    
+                <h3 class="card-text time text-center   ">
+                    Affordable </h3>
+                <p class="card-text text-white text-center">
+                    "We offer the most competitive and affordable prices in the market.
+                    Our service quality exceeds when compared to any
+                    other similar service providers."
+    
+                </p>
+                <hr>
+    
+            </div>
+        </div>
+    
+    
+    
+    
+    
     </div>
 
     
-
 </div>
 
 
+<script>
+    let autocomplete;
+    function initAutocomplete() {
 
-   
+        var options = {
+            types: ["establishment", "geocode"],
+            componentRestrictions: { 'country': ['CA'] },
+            fields: ['place_id', 'geometry', 'name']
+        }
+
+        var input1 = document.getElementById('from');
+        var autocomplete1 = new google.maps.places.Autocomplete(input1, options)
+
+        var input2 = document.getElementById('to');
+        var autocomplete2 = new google.maps.places.Autocomplete(input2, options)
 
 
+        // autocomplete = new google.maps.places.Autocomplete(
 
-<div class="container-fluid  ">
+        //     document.querySelectorAll("#autocomplete"),
+        //     {
+        //         types: ["establishment", "geocode"],
+        //         componentRestrictions: { 'country': ['CA'] },
+        //         fields: ['place_id', 'geometry', 'name']
+        //     });
+
+        //autocomplete.addListener('place_changed', onPlaceChanged)
+    }
+
+    // function onPlaceChanged() {
+    //     var place = autocomplete.getPlace();
+
+    //     if (!place.geometry) {
+    //         document.querySelectorAll('#autocomplete').placeholder = 'Enter a place';
+    //     } else {
+    //         document.querySelectorAll('#details').innerHTML = place.name;
+    //     }
+    // }
+  
     
-<div class="heading">
-    <h3 class=" fw-bold text-center text-white text-uppercase">Welcome To Limousine Tours</h3>
-</div>
-<div class="card bg-dark text-white" >
-<img src="/images/promise5.jpg" class="card-img" alt="...">
-<div class="card-img-overlay">
-    <h3 class="card-title  text-uppercase text-center ">Our Promise</h3>
-    
-    
-    <p class="card-text text-white text-center fs-6 promise">
-        LimoTours is committed to providing you with an unforgettable limousine experience.
-         We dedicate ourselves in managing our limo fleet and team of professional chauffeurs to support you with the best traveling experience throughout
-    the Greater Toronto and Surrounding areas.
-    </p>
-    
-</div>
-</div>
-
-<div>
-
-    <h3 class="text-center text-uppercase ">Who <strong class="time">We</strong> Are</h3>
-<p class="text-center fs-6 ">Our Service Specializes in: </p>
-</div>
 
 
 
+</script>
 
-<div class="card bg-dark text-white pt-5">
-    <img src="/images/whoweare.jpg" class="card-img" alt="...">
-    <div class="card-img-overlay">
-
-        <hr>
-
-        <h3 class="card-text time text-center ">
-            Always On Time</h3>
-        <p class=" card-text text-white text-center  ">
-            "Your driver always arrives early and
-            up arrival you will get a text message
-            notifying you that your driver has arrived
-            and you can also track your driver."</p>
-        <hr>
-
-
-
-
-        <h3 class="card-text time text-center   ">
-            Hassle Free </h3>
-        <p class=" card-text text-white text-center  ">
-            "We offer hassle free service either you are going
-            to the airport or being picked up from the airport or
-            any We track and
-            monitor all flights for any arrival related changes"
-
-        </p>
-        <hr>
-
-
-        <h3 class="card-text time text-center   ">
-            Affordable </h3>
-        <p class="card-text text-white text-center">
-            "We offer the most competitive and affordable prices in the market.
-            Our service quality exceeds when compared to any
-            other similar service providers."
-
-        </p>
-        <hr>
-
-    </div>
-</div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX29kCGQrfwd-QvLA-RGgMYIP-0Z7RL1c&libraries=places&callback=initAutocomplete">
+</script>
 
 
 
 
 
-</div>
 
 
 
