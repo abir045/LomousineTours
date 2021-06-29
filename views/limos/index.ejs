@@ -32,7 +32,7 @@
                     <h6 class="text-center">Price Per Day: <%= limo.pricePerDay %>$</h6>
                     <h6 class="text-center">Airport Transfer: <%= limo.airportTransfer %>$</h6>
             </p>
-    
+       <%- include('../partials/deleteForm', {url:`/limos/${limo.id}` }) %>
     
         </div>
     </div>

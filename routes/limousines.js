@@ -46,20 +46,38 @@ router.post("/", async (req, res) => {
     pricePerHour: req.body.pricePerHour,
     pricePerDay: req.body.pricePerDay,
     airportTransfer: req.body.airportTransfer,
-    //coverImageName: fileName,
     description: req.body.description,
   });
   saveCover(limo, req.body.cover);
 
   try {
     const newLimo = await limo.save();
-    //res.redirect(`limos/${newLimo.id}`)
-    res.redirect("limos");
+    res.redirect(`limos/${newLimo.id}`);
+    //res.redirect("limos");
   } catch {
     // if (limo.coverImageName != null) {
     //   removeLimoCover(limo.coverImageName);
     // }
     renderNewPage(res, limo, true);
+  }
+});
+
+//delete limo page
+router.delete("/:id", async (req, res) => {
+  let limo;
+  try {
+    limo = await Limo.findById(req.params.id);
+    await limo.remove();
+    res.redirect("/limos");
+  } catch {
+    if (limo != null) {
+      res.render("limos/new", {
+        limo: limo,
+        errorMessage: "Could not remove limo",
+      });
+    } else {
+      res.redirect("/");
+    }
   }
 });
 
