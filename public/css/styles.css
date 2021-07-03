@@ -91,3 +91,8 @@ hr {
 
   border: 3px solid white;
 }
+
+.dropdown {
+  max-width: 100%;
+  background-color: white;
+}

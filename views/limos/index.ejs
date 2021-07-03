@@ -21,7 +21,11 @@
 <% limos.forEach(limo => { %>
 
     <div class="card vehicles" style="width: 18rem;">
+        <a href="/limos/<%= limo.id %>">
+        
         <img src="<%= limo.coverImagePath %>" height='200' width='400' class="card-img float-left" alt="...">
+        </a>
+        
         <div class="card-body">
             <h5 class="card-title text-center">
                 <%= limo.title %>
@@ -32,7 +36,7 @@
                     <h6 class="text-center">Price Per Day: <%= limo.pricePerDay %>$</h6>
                     <h6 class="text-center">Airport Transfer: <%= limo.airportTransfer %>$</h6>
             </p>
-       <%- include('../partials/deleteForm', {url:`/limos/${limo.id}` }) %>
+        <button type='submit' class='btn btn-info'>Book</button>
     
         </div>
     </div>

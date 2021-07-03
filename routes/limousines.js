@@ -1,18 +1,12 @@
 const express = require("express");
 const { route } = require(".");
-//const multer = require("multer");
-//const path = require("path");
-//const fs = require("fs");
+const methodOverride = require("method-override");
 const Limo = require("../models/limo");
 //const uploadPath = path.join("public", Limo.coverImageBasePath);
 const imageMimeTypes = ["image/jpeg", "image/png", "image/gif"];
 const router = express.Router();
-// const upload = multer({
-//   dest: uploadPath,
-//   fileFilter: (req, file, callback) => {
-//     callback(null, imageMimeTypes.includes(file.mimetype));
-//   },
-// });
+const app = express();
+app.use(methodOverride("_method"));
 
 //all limo route
 router.get("/", async (req, res) => {
@@ -40,7 +34,6 @@ router.get("/new", async (req, res) => {
 
 //create limo route
 router.post("/", async (req, res) => {
-  //const fileName = req.file != null ? req.file.filename : null;
   const limo = new Limo({
     title: req.body.title,
     pricePerHour: req.body.pricePerHour,
@@ -62,6 +55,51 @@ router.post("/", async (req, res) => {
   }
 });
 
+//show book route
+router.get("/:id", async (req, res) => {
+  try {
+    const limo = await Limo.findById(req.params.id).populate("limo").exec();
+    res.render("limos/show", { limo: limo });
+  } catch {
+    res.redirect("/");
+  }
+});
+
+//edit book routr
+router.get("/:id/edit", async (req, res) => {
+  try {
+    const limo = await Limo.findById(req.params.id);
+    renderEditPage(res, limo);
+  } catch {
+    res.redirect("/");
+  }
+});
+
+//update book route
+router.put("/:id", async (req, res) => {
+  let limo;
+  try {
+    limo = await Limo.findById(req.params.id);
+    limo.title = req.body.title;
+    limo.description = req.body.description;
+    limo.pricePerHour = req.body.pricePerHour;
+    limo.pricePerDay = req.body.pricePerDay;
+    limo.airportTransfer = req.body.airportTransfer;
+    if (req.body.cover != null && req.body.cover !== "") {
+      saveCover(limo, req.body.cover);
+    }
+    await limo.save();
+    res.redirect(`/limos/${limo.id}`);
+  } catch (err) {
+    console.log(err);
+    if (limo != null) {
+      renderEditPage(res, limo, true);
+    } else {
+      res.redirect("/");
+    }
+  }
+});
+
 //delete limo page
 router.delete("/:id", async (req, res) => {
   let limo;
@@ -69,9 +107,10 @@ router.delete("/:id", async (req, res) => {
     limo = await Limo.findById(req.params.id);
     await limo.remove();
     res.redirect("/limos");
-  } catch {
+  } catch (err) {
+    console.log(err);
     if (limo != null) {
-      res.render("limos/new", {
+      res.render("limos/show", {
         limo: limo,
         errorMessage: "Could not remove limo",
       });
@@ -88,12 +127,47 @@ router.delete("/:id", async (req, res) => {
 // }
 
 function renderNewPage(res, limo, hasError = false) {
+  renderFormPage(res, limo, "new", hasError);
+
+  // try {
+  //   const params = {
+  //     limo: limo,
+  //   };
+  //   if (hasError) params.errorMessage = "Error creating Limo";
+  //   res.render("limos/new", params);
+  // } catch {
+  //   res.redirect("/limos");
+  // }
+}
+
+function renderEditPage(res, limo, hasError = false) {
+  renderFormPage(res, limo, "edit", hasError);
+  // try {
+  //   const params = {
+  //     limo: limo,
+  //   };
+  //   if (hasError) params.errorMessage = "Error creating Limo";
+  //   res.render("limos/new", params);
+  // } catch {
+  //   res.redirect("/limos");
+  // }
+}
+
+function renderFormPage(res, limo, form, hasError = false) {
   try {
+    //const limo = await Limo.findById(req.params.id);
     const params = {
       limo: limo,
     };
-    if (hasError) params.errorMessage = "Error creating Limo";
-    res.render("limos/new", params);
+    if (hasError) {
+      if (form === "edit") {
+        params.errorMessage = "Error updating limo";
+      } else {
+        params.errorMessage = "Error creating limo";
+      }
+    }
+
+    res.render(`limos/${form}`, params);
   } catch {
     res.redirect("/limos");
   }

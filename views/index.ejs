@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" />
 
 
 <div>
@@ -17,22 +18,9 @@
                 <div class="row g-0 bg-secondary">
                     <div class="col-md-3 ">
                         <div class="form-floating ">
-                            <!-- <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                                <option selected>Pickup: Toronto Pearson Airport</option>
-    
-                                <option value="Drop off: Toronto Pearson Airport">Drop off: Toronto Pearson Airport</option>
-                                <option value="Other (Destinations)">
-                                <input type='text' id='floatingInputGrid' placeholder="" class='form-control'>
-                                </option>
-                            </select> -->
-                            <input type='text' id='from'  placeholder="From" class='form-control' value="">
-                       
-    
-                            <label class="fw-bold fs-5" id='details' for="floatingInputGrid"> Select Direction</label>
-
-                            
-                            
-                        </div>
+                        <input type='text' id='from'  placeholder="From" class='form-control' value="">
+                       <label class="fw-bold fs-5" id='details' for="floatingInputGrid"> Select Direction</label>
+                    </div>
                     </div>
 
 
@@ -44,7 +32,7 @@
                     </div>
                     <div class="col-md-2">
                         <div class="form-floating">
-                            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                            <select class="form-select" id="people" aria-label="Floating label select example">
                                 <option selected>1</option>
     
                                 <option value="2">2</option>
@@ -67,7 +55,7 @@
                     </div>
                     <div class="col-md-2">
                         <div class="form-floating">
-                            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                            <select class="form-select" id="bags" aria-label="Floating label select example">
                                 <option selected>1</option>
     
                                 <option value="2">2</option>
@@ -91,26 +79,60 @@
     
                     </div>
     
-                    <div class="col-md-2">
-                        <div class="form-floating">
-                            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                                <option selected>Sedan</option>
+    <div class="col-md-2 dropdown">
+    <!-- <div class="form-floating "> -->
+
+        <a class="btn btn-light btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Select Limo Type
+        </a>
+       
+   
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <% limos.forEach(limo=> { %>
+        
+            <div class="card vehicles" style="width: 18rem;">
+                <a href="/limos/<%= limo.id %>">
+        
+                    <img src="<%= limo.coverImagePath %>" height='200' width='400' class="card-img float-left" alt="...">
+                </a>
+        
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <%= limo.title %>
+                    </h5>
+                    <p class="card-text ">
+        
+                    <h6 class="text-center">Price Per Hour: <%= limo.pricePerHour %>$</h6>
+                    <h6 class="text-center">Price Per Day: <%= limo.pricePerDay %>$</h6>
+                    <h6 class="text-center">Airport Transfer: <%= limo.airportTransfer %>$</h6>
+                    </p>
+                    <button type='submit' class='btn btn-info'>Book</button>
+        
+                </div>
+            </div>
+        
+        
+            <!-- <img height='600' width='400' src="<%= limo.coverImagePath %>"" > -->
+        
+            <% }) %>
+        </ul>
+
+          <!-- <option value="sedan">sedan</option> 
+          <option value="SUV">SUV</option>
+          <option value="van">Van</option>
+          <option value="largeSUV">Large SUV</option>
+          <option value="largeVan">Large Van</option>  -->
     
-                                <option value="SUV">SUV</option>
-                                <option value="Van">Van</option>
-                                <option value="Large SUV">Large SUV</option>
-                                <option value="Large Van">Large Van</option>
+        <!-- </select> -->
+        <!-- <label class="fw-bold fs-5" for="floatingSelectGrid">Limo Type</label> -->
+       
+       
+        
+        <!-- </div> -->
+        </div>
     
-                            </select>
-                            <label class="fw-bold fs-5" for="floatingSelectGrid">Limo Type</label>
-                        </div>
-                    </div>
-    
-                    <!-- <div class="col-md">
-                            <div class="form-floating">
-                                <button type='submit' class='btn btn-info'>Book</button>
-                            </div>
-                        </div> -->
+                   
                 </div>
             </form>
         </div>
@@ -227,8 +249,37 @@
 
     
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
+
+<!-- select2 script -->
+
+<!-- <script>
+    $(document).ready(function () {
+        $("#limo_tours").select2({
+            placeholder: "Select something",
+            templateResult: formatState,
+            
+              
+
+        });
+    });
+
+    function formatState(state) {
+        if (!state.id) { return state.text; }
+
+        var baseUrl = "limo.coverImagePath"
+        var $state = $(
+            // '<div ><img sytle="display:inline-block;" src="images/' + state.element.value.toLowerCase() + '.jpg" /> ' + state.text + '</div>'
+            '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.jpg" class="img-flag" /> ' + state.text + '</span>'
+            );
+        return $state;
+    }
+</script> -->
 
 
+
+<!-- maps script -->
 <script>
     let autocomplete;
     function initAutocomplete() {
@@ -246,27 +297,10 @@
         var autocomplete2 = new google.maps.places.Autocomplete(input2, options)
 
 
-        // autocomplete = new google.maps.places.Autocomplete(
-
-        //     document.querySelectorAll("#autocomplete"),
-        //     {
-        //         types: ["establishment", "geocode"],
-        //         componentRestrictions: { 'country': ['CA'] },
-        //         fields: ['place_id', 'geometry', 'name']
-        //     });
-
-        //autocomplete.addListener('place_changed', onPlaceChanged)
+       
     }
 
-    // function onPlaceChanged() {
-    //     var place = autocomplete.getPlace();
-
-    //     if (!place.geometry) {
-    //         document.querySelectorAll('#autocomplete').placeholder = 'Enter a place';
-    //     } else {
-    //         document.querySelectorAll('#details').innerHTML = place.name;
-    //     }
-    // }
+ 
   
     
 
