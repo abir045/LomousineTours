@@ -55,7 +55,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-//show book route
+//show limo route
 router.get("/:id", async (req, res) => {
   try {
     const limo = await Limo.findById(req.params.id).populate("limo").exec();
@@ -65,7 +65,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-//edit book routr
+//edit limo  routr
 router.get("/:id/edit", async (req, res) => {
   try {
     const limo = await Limo.findById(req.params.id);
@@ -118,6 +118,13 @@ router.delete("/:id", async (req, res) => {
       res.redirect("/");
     }
   }
+});
+
+router.post("/booking", (req, res) => {
+  console.log(req.body);
+  res.render("booking", {
+    title: "confirm",
+  });
 });
 
 // function removeLimoCover(fileName) {

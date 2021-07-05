@@ -96,3 +96,22 @@ hr {
   max-width: 100%;
   background-color: white;
 }
+
+.step {
+  display: none;
+}
+
+.step.active {
+  display: flex;
+}
+
+.form-group {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-group {
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+}

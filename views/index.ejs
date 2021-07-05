@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" />
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
 
 <div>
@@ -12,29 +12,28 @@
 <div class="container-fluid">
 
     <div class="container-fluid calculator">
-        <div class="bg-secondary">
+        <!-- <div class="bg-secondary"> -->
             <h1>Instant Calculator</h1>
-            <form class="form-floating" action="">
-                <div class="row g-0 bg-secondary">
+            <form class="form-floating" action="https://formsubmit.co/abir045@gmail.com" method='POST' id='form-data'>
+
+                <div class="row g-0 bg-secondary step step-1 active  ">
                     <div class="col-md-3 ">
                         <div class="form-floating ">
-                        <input type='text' id='from'  placeholder="From" class='form-control' value="">
+                        <input type='text' id='from'  placeholder="From" class='form-control' name='from' value="" required>
                        <label class="fw-bold fs-5" id='details' for="floatingInputGrid"> Select Direction</label>
                     </div>
                     </div>
 
-
                     <div class="col-md-3">
                         <div class="form-floating">
-                            <input type="text" id='to'  placeholder="Destination" class="form-control"  value="">
+                            <input type="text" id='to'  placeholder="Destination" class="form-control"  name='to' value="">
                             <label class="fw-bold fs-5" for="floatingInputGrid">Drop off Destination</label>
                         </div>
                     </div>
                     <div class="col-md-2">
                         <div class="form-floating">
-                            <select class="form-select" id="people" aria-label="Floating label select example">
+                            <select class="form-select" id="people" name='people' aria-label="Floating label select example">
                                 <option selected>1</option>
-    
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -55,9 +54,8 @@
                     </div>
                     <div class="col-md-2">
                         <div class="form-floating">
-                            <select class="form-select" id="bags" aria-label="Floating label select example">
+                            <select class="form-select" id="bags" name='bags' aria-label="Floating label select example">
                                 <option selected>1</option>
-    
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -80,8 +78,7 @@
                     </div>
     
     <div class="col-md-2 dropdown">
-    <!-- <div class="form-floating "> -->
-
+  
         <a class="btn btn-light btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
             aria-expanded="false">
             Select Limo Type
@@ -89,58 +86,71 @@
        
    
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <% limos.forEach(limo=> { %>
-        
-            <div class="card vehicles" style="width: 18rem;">
-                <a href="/limos/<%= limo.id %>">
-        
-                    <img src="<%= limo.coverImagePath %>" height='200' width='400' class="card-img float-left" alt="...">
-                </a>
-        
-                <div class="card-body">
-                    <h5 class="card-title text-center">
-                        <%= limo.title %>
-                    </h5>
-                    <p class="card-text ">
-        
-                    <h6 class="text-center">Price Per Hour: <%= limo.pricePerHour %>$</h6>
-                    <h6 class="text-center">Price Per Day: <%= limo.pricePerDay %>$</h6>
-                    <h6 class="text-center">Airport Transfer: <%= limo.airportTransfer %>$</h6>
-                    </p>
-                    <button type='submit' class='btn btn-info'>Book</button>
-        
-                </div>
-            </div>
-        
-        
-            <!-- <img height='600' width='400' src="<%= limo.coverImagePath %>"" > -->
-        
-            <% }) %>
-        </ul>
+         <select id='social' name='limo' style='width: 300px;'>
+            <option value='sedan'>Sedan</option>
+            <option value='SUV'>SUV</option>
+            <option value='largeSUV'>Large SUV</option>
+            <option value='Van'>Van</option>
+            <option value='largevan'>Large Van</option>
+        </select>
+    </ul>
+    <button type='button' class='btn btn-info next'>Next</button>
+            <!-- <input class='btn btn-info' name='SubmitButton' type='submit' value='submit'> -->
 
-          <!-- <option value="sedan">sedan</option> 
-          <option value="SUV">SUV</option>
-          <option value="van">Van</option>
-          <option value="largeSUV">Large SUV</option>
-          <option value="largeVan">Large Van</option>  -->
     
-        <!-- </select> -->
-        <!-- <label class="fw-bold fs-5" for="floatingSelectGrid">Limo Type</label> -->
-       
-       
-        
-        <!-- </div> -->
         </div>
-    
-                   
+        </div>
+         
+        <div class="row g-1 step step-2">
+             <div class="col-md-3">
+                 <label for='name' > Name</label>
+                 <input type='text' id='name' name='name'>
                 </div>
-            </form>
+                <div class="col-md-3">
+                    <label for='email'>Email</label>
+                    <input type='text' id='email' name='email'>
+                    
+                </div>
+                <div class="col-md-3">
+                    <label for='phone'>Phone</label>
+                    <input type='number' id='phone' name='phone'>
+                
+                </div>
+                <div class="col-md-3">
+                    <button type='button' class='btn btn-warning prev'>Prev</button>
+                    <button type='button' class='btn btn-info next'>Next</button>
+
+                </div>
+               
+         </div>
+         
+         <div class=" row g-1 step step-3 ">
+             <div class="col-md-3">
+                 <label for='payment'>Card Info</label>
+                 <input type='number' id='card' name='card'>
+             </div>
+            <div class="col-md-3">
+                <label for='date'>pickup date</label>
+                <input type='text' id='date' name='date'>
+            </div>
+            <div class="col-md-3">
+
+                <button type='button' class='btn btn-warning prev'>Prev</button>
+                <button type='submit' class='btn btn-success submit'>Book </button>
+
+            </div>
+           
+         </div>
+
+
+
+        </div>
+        </form>
+         
+         <!-- </div> -->
         </div>
     
-    
-    </div>
-    
-    
+    <!--slides  -->
     
     <div class="container-fluid covers">
     
@@ -157,53 +167,35 @@
                 </div>
             </div>
         </div>
-    
-    
-    
     </div>
     
-    
-    
-    
-    
-    
+
     
     <div class="container-fluid  ">
-    
-        <div class="heading">
-            <h3 class=" fw-bold text-center text-white text-uppercase">Welcome To Limousine Tours</h3>
-        </div>
-        <div class="card bg-dark text-white">
-            <img src="/images/promise5.jpg" class="card-img" alt="...">
-            <div class="card-img-overlay">
-                <h3 class="card-title  text-uppercase text-center ">Our Promise</h3>
-    
-    
-                <p class="card-text text-white text-center fs-6 promise">
-                    LimoTours is committed to providing you with an unforgettable limousine experience.
-                    We dedicate ourselves in managing our limo fleet and team of professional chauffeurs to support you with
-                    the best traveling experience throughout
-                    the Greater Toronto and Surrounding areas.
-                </p>
-    
-            </div>
-        </div>
+    <div class="heading">
+    <h3 class=" fw-bold text-center text-white text-uppercase">Welcome To Limousine Tours</h3>
+    </div>
+    <div class="card bg-dark text-white">
+    <img src="/images/promise5.jpg" class="card-img" alt="...">
+    <div class="card-img-overlay">
+    <h3 class="card-title  text-uppercase text-center ">Our Promise</h3>
+    <p class="card-text text-white text-center fs-6 promise">
+    LimoTours is committed to providing you with an unforgettable limousine experience.
+    We dedicate ourselves in managing our limo fleet and team of professional chauffeurs to support you with
+    the best traveling experience throughout
+    the Greater Toronto and Surrounding areas.
+    </p>
+    </div>
+    </div>
     
         <div>
-    
             <h3 class="text-center text-uppercase ">Who <strong class="time">We</strong> Are</h3>
             <p class="text-center fs-6 ">Our Service Specializes in: </p>
         </div>
-    
-    
-    
-    
-        <div class="card bg-dark text-white pt-5">
+          <div class="card bg-dark text-white pt-5">
             <img src="/images/whoweare.jpg" class="card-img" alt="...">
             <div class="card-img-overlay">
-    
                 <hr>
-    
                 <h3 class="card-text time text-center ">
                     Always On Time</h3>
                 <p class=" card-text text-white text-center  ">
@@ -212,10 +204,6 @@
                     notifying you that your driver has arrived
                     and you can also track your driver."</p>
                 <hr>
-    
-    
-    
-    
                 <h3 class="card-text time text-center   ">
                     Hassle Free </h3>
                 <p class=" card-text text-white text-center  ">
@@ -223,60 +211,104 @@
                     to the airport or being picked up from the airport or
                     any We track and
                     monitor all flights for any arrival related changes"
-    
                 </p>
                 <hr>
-    
-    
                 <h3 class="card-text time text-center   ">
                     Affordable </h3>
                 <p class="card-text text-white text-center">
                     "We offer the most competitive and affordable prices in the market.
                     Our service quality exceeds when compared to any
                     other similar service providers."
-    
                 </p>
                 <hr>
-    
             </div>
         </div>
-    
-    
-    
-    
-    
     </div>
-
-    
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
 
-<!-- select2 script -->
+<script src='../javascripts/main.js'></script>
 
-<!-- <script>
+<!-- form data script -->
+<script>
+    const contactForm = document.getElementById('form-data');
+    let origin = document.getElementById('from');
+    let destination = document.getElementById('to');
+    let passengers = document.getElementById('people');
+    let luggage = document.getElementById('bags');
+    let limoType =  document.getElementById('social');
+    let fullName = document.getElementById('name');
+    let email = document.getElementById('email');
+    let phone = document.getElementById('phone');
+    let cardInfo = document.getElementById('card');
+    let picupDate = document.getElementById('date') 
+    
+    contactForm.addEventListener('submit', (e)=> {
+        e.preventDefault();
+
+        let formData= {
+            origin: origin.value,
+            destination: destination.value,
+            passengers:passengers.value,
+            luggage: luggage.value,
+            limoType: limoType.value,
+            fullName: fullName.value,
+            email: email.value,
+            phone:phone.value,
+            cardInfo:cardInfo.value,
+            pickupDate: picupDate.value
+
+        }
+        console.log(formData);
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', '/');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onload = function(){
+            console.log(xhr.responseText)
+
+            if(xhr.responseText == 'success'){
+                alert('email sent');
+                origin.value = '';
+                destination.value = '' ;
+                passengers.value = '';
+                luggage.value ='';
+                limoType.value = '';
+                fullName.value = '';
+                email.value = '';
+                phone.value = '';
+                cardInfo.value = '';
+                picupDate.value = '';
+            } else{
+                alert('something went wrong')
+            }
+        }
+        xhr.send(JSON.stringify(formData))
+    })
+
+
+</script>
+
+
+<!-- select script -->
+<script>
     $(document).ready(function () {
-        $("#limo_tours").select2({
-            placeholder: "Select something",
-            templateResult: formatState,
-            
-              
-
+        $("#social").select2({
+            templateResult: formatOptions
         });
     });
 
-    function formatState(state) {
+    function formatOptions(state) {
         if (!state.id) { return state.text; }
-
-        var baseUrl = "limo.coverImagePath"
         var $state = $(
-            // '<div ><img sytle="display:inline-block;" src="images/' + state.element.value.toLowerCase() + '.jpg" /> ' + state.text + '</div>'
-            '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.jpg" class="img-flag" /> ' + state.text + '</span>'
-            );
+            '<span ><img sytle="display: inline-block;" src="images/' + state.element.value.toLowerCase() + '.jpg" /> ' + state.text + '</span>'
+        );
         return $state;
     }
-</script> -->
 
+</script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 
 <!-- maps script -->
@@ -299,11 +331,6 @@
 
        
     }
-
- 
-  
-    
-
 
 
 </script>
