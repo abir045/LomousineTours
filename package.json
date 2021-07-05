@@ -17,7 +17,8 @@
     "express-ejs-layouts": "^2.5.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.12.14",
-    "nodemailer": "^6.6.2"
+    "nodemailer": "^6.6.2",
+    "nodemailer-smtp-transport": "^2.7.4"
   },
   "devDependencies": {
     "dotenv": "^10.0.0"

@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Limo = require("../models/limo");
 const nodemailer = require("nodemailer");
+var smtpTransport = require("nodemailer-smtp-transport");
 
 router.get("/", async (req, res) => {
   let limos;
@@ -16,16 +17,19 @@ router.get("/", async (req, res) => {
 router.post("/", (req, res) => {
   console.log(req.body);
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "limotaxitours@gmail.com",
-      pass: "Livestrong1947",
-    },
-  });
+  const transporter = nodemailer.createTransport(
+    smtpTransport({
+      service: "gmail",
+      host: "smtp.gmail.com",
+      auth: {
+        user: "limotaxitours@gmail.com",
+        pass: "Livestrong1947",
+      },
+    })
+  );
 
   const mailOptions = {
-    from: req.body.email,
+    from: "limotaxitours@gmail.com",
     to: "limotaxitours@gmail.com",
     subject: `message from ${req.body.email}`,
     text: `PickUp: ${req.body.origin} 
