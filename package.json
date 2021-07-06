@@ -18,7 +18,8 @@
     "method-override": "^3.0.0",
     "mongoose": "^5.12.14",
     "nodemailer": "^6.6.2",
-    "nodemailer-smtp-transport": "^2.7.4"
+    "nodemailer-smtp-transport": "^2.7.4",
+    "select2": "^4.1.0-rc.0"
   },
   "devDependencies": {
     "dotenv": "^10.0.0"
