@@ -47,7 +47,7 @@ router.post("/", (req, res) => {
       console.log(err);
       res.send("error");
     } else {
-      console.log("Email sent: " + info.response);
+      console.log("Booking confirmed: " + info.response);
       res.send("success");
     }
   });
