@@ -87,6 +87,12 @@ body {
   right: 120px;
 }
 
+.call {
+  position: fixed;
+  top: 30px;
+  right: 170px;
+}
+
 .time {
   color: orange;
 }
