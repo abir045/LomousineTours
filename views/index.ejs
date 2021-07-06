@@ -96,7 +96,7 @@
          <select id='social' name='limo' style='width: 300px;'>
             <option value="sedan">Sedan</option>
             <option value="SUV">SUV</option>
-            <option value="largeSUV">Large SUV</option>
+            <option value="largesuv">Large SUV</option>
             <option value="van">Van</option>
             <option value="largevan">Large Van</option>
         </select>
@@ -448,7 +448,7 @@
     function formatOptions(state) {
         if (!state.id) { return state.text; }
         var $state = $(
-            '<span ><img sytle="display:block;" src="images/' + state.element.value.toLowerCase() + '.jpg" /> ' + state.text + '</span>'
+            '<span ><img sytle="display:block;" src="images/vehicles/' + state.element.value.toLowerCase() + '.jpg" /> ' + state.text + '</span>'
         );
         return $state;
     }
