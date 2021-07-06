@@ -12,6 +12,14 @@
     </a>
 
 </div>
+<div>
+    <a href="sms:+1-647-889-6286" target="blank">
+        <img src='/images/sms.svg' width="40px" class="sms">
+    </a>
+
+</div>
+
+
 
 <div class="container-fluid">
 
@@ -416,7 +424,7 @@
             pickupDate: picupDate.value
 
         }
-        console.log(formData);
+        
 
         let xhr = new XMLHttpRequest();
         xhr.open('POST', '/');
@@ -506,18 +514,4 @@
 
 
 
-<!-- <div class="container">
-<h1 class="text-center pt-5">Our vehicles</h1>
-<% limos.forEach(limo=> { %>
-    
-    <div class="card vehicles" style="width: 18rem;">
-        <img src="<%= limo.coverImagePath %>" height='200' width='400' class="card-img float-left" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">
-                <%= limo.title %>
-            </h5>   
-        </div>
-    </div>
-    <% }) %>
 
-</div> -->

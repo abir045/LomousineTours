@@ -81,6 +81,12 @@ body {
   right: 70px;
 }
 
+.sms {
+  position: fixed;
+  top: 30px;
+  right: 120px;
+}
+
 .time {
   color: orange;
 }
