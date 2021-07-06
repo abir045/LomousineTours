@@ -1,7 +1,7 @@
 
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="css/styles.css">
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 
 
 
@@ -447,14 +447,14 @@
     function formatOptions(state) {
         if (!state.id) { return state.text; }
         var $state = $(
-            '<span ><img sytle="display: inline-block;" src="images/' + state.element.value.toLowerCase() + '.jpg" /> ' + state.text + '</span>'
+            '<span ><img sytle="display:block;" src="images/' + state.element.value.toLowerCase() + '.jpg" /> ' + state.text + '</span>'
         );
         return $state;
     }
 
 </script>
 
-
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 <!-- maps script -->
 <script>
