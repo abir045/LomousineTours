@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="css/styles.css">
 
 
+
 <div>
     <a href="https://wa.me/16478896286" target="blank">
         <img src='/images/whatsapp.svg' width="40px" class="whatsapp">
@@ -31,8 +32,9 @@
 
 <div class="container-fluid">
 
-    <div class="container-fluid calculator">
+    <div class="container-fluid calculator  ">
         <!-- <div class="bg-secondary"> -->
+
             <h1>Instant Calculator</h1>
             <form class="form-floating" action="" method='POST' id='form-data'>
 
@@ -153,8 +155,10 @@
                  <input type='number' id='card' name='card'>
              </div>
             <div class="col-md-3">
-                <label for='date'>pickup date</label>
-                <input type='text' id='date' name='date'>
+                <label for='date'>Pickup Date and Time</label>
+                
+              <input type="number" id="basicDate" placeholder="Please select Date Time" data-input>
+            
             </div>
             <div class="col-md-3">
 
@@ -169,13 +173,12 @@
 
         </div>
         </form>
-         
-         <!-- </div> -->
+       
         </div>
     
     <!--slides  -->
     
-    <div class="container-fluid covers">
+    <div class="container-fluid covers  ">
     
         <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -193,7 +196,7 @@
     </div>
     
 
-    
+       
     <div class="container-fluid  ">
     <div class="heading">
     <h3 class=" fw-bold text-center text-white text-uppercase">Welcome To Limousine Tours</h3>
@@ -297,7 +300,7 @@
 
     <!-- corporate limo service -->
 
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="mt-3 mb-3">
             <h3 class="text-center fw-bold "> Corporate Limo Service</h3>
         </div>
@@ -362,7 +365,7 @@
         </div>
     </div>
 
-    <div class="container-fluid row ">
+    <div class="container-fluid row  ">
         <div class="mt-3 mb-3">
             <h3 class="text-center fw-bold">Our Fleet</h3>
         </div>
@@ -371,7 +374,7 @@
 
         <% limos.forEach(limo=> { %>
         
-            <div class="card col-md" >
+            <div class="card col-md w-100" >
                 <a href="/limos/<%= limo.id %>">
         
                     <img src="<%= limo.coverImagePath %>"  class="card-img" alt="...">
@@ -393,13 +396,28 @@
             <% }) %>
 
     </div>
+    </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script src='../javascripts/main.js'></script>
 
-<!-- icon select script -->
+<!-- flatcpickr script -->
+<script>
+   
+   $(document).ready(function(){
+       $("#basicDate").flatpickr({
+            enableTime: true,
+            dateFormat: "F, d Y H:i",
+            calender: true,
+        });
+    });
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 
 <!-- form data script -->
@@ -414,7 +432,7 @@
     let email = document.getElementById('email');
     let phone = document.getElementById('phone');
     let cardInfo = document.getElementById('card');
-    let picupDate = document.getElementById('date') 
+    let picupDate = document.getElementById('basicDate') ;
     
     contactForm.addEventListener('submit', (e)=> {
         e.preventDefault();
@@ -432,7 +450,7 @@
             pickupDate: picupDate.value
 
         }
-        
+           console.log(formData);        
 
         let xhr = new XMLHttpRequest();
         xhr.open('POST', '/');
@@ -465,6 +483,7 @@
 
 <!-- select script -->
 <script>
+   
     $(document).ready(function () {
         $("#social").select2({
             templateResult: formatOptions

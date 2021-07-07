@@ -127,3 +127,7 @@ hr {
   padding: 5px;
   border-radius: 4px;
 }
+
+div#fp-nav a span {
+  background: #fff !important;
+}
