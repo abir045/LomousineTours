@@ -156,7 +156,7 @@ ul {
 
 .card__row {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding-bottom: 0.5rem;
 }
 
@@ -168,9 +168,9 @@ ul {
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.card-col {
+/* .card-col {
   padding-right: 1rem;
-}
+} */
 
 .card__input {
   background: none;
