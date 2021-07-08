@@ -144,26 +144,32 @@ ul {
     rgba(255, 255, 255, 0.05)
   ); */
   max-height: 50vh;
+
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
     1px 1px 2px #555;
   backdrop-filter: blur(0.8rem);
   /* padding: 1.5rem; */
   border-radius: 1rem;
   animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
+  overflow: hidden;
 }
 
 .card__row {
   display: flex;
-  justify-content: space-between;
-  /* padding-bottom: 0.5rem; */
+  justify-content: center;
+  padding-bottom: 0.5rem;
 }
 
 .card__title {
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #1d005f;
   margin: 1rem 0 1.5rem;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-col {
+  padding-right: 1rem;
 }
 
 .card__input {
@@ -204,9 +210,10 @@ ul {
 }
 
 .card__brand {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #fff;
-  max-width: 30px;
+  width: 100px;
+  display: block;
   /* max-height: 75px; */
   text-align: right;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
