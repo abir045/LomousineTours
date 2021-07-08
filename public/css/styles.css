@@ -204,10 +204,10 @@ ul {
 }
 
 .card__brand {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
-  min-width: 100px;
-  min-height: 75px;
+  max-width: 30px;
+  /* max-height: 75px; */
   text-align: right;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
