@@ -140,7 +140,7 @@ ul {
 }
 
 .credit {
-  background: purple url("/images/bg.svg");
+  background: purple url("/images/card.jpg");
   /* background: linear-gradient(
     to bottom right,
     rgba(255, 255, 255, 0.2),
@@ -202,7 +202,7 @@ ul {
 }
 
 .card__chip img {
-  width: 1.5rem;
+  max-width: 1.5rem;
 }
 
 .card__brand {
