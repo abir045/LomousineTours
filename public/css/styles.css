@@ -136,11 +136,8 @@ ul {
   list-style-type: none;
 }
 
-.credit body {
-}
-
 .credit {
-  background: purple url("/images/card.jpg");
+  /* background: purple url("/images/card.jpg"); */
   /* background: linear-gradient(
     to bottom right,
     rgba(255, 255, 255, 0.2),
@@ -149,7 +146,7 @@ ul {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
     1px 1px 2px #555;
   backdrop-filter: blur(0.8rem);
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   border-radius: 1rem;
   animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
 }
@@ -157,7 +154,7 @@ ul {
 .card__row {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 2rem;
+  /* padding-bottom: 0.5rem; */
 }
 
 .card__title {
