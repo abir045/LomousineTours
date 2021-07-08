@@ -151,7 +151,6 @@ ul {
   /* padding: 1.5rem; */
   border-radius: 1rem;
   animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
-  overflow: hidden;
 }
 
 .card__row {
