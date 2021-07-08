@@ -2,31 +2,26 @@
 
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="css/styles.css">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" />
 
 
 <div>
     <a href="https://wa.me/16478896286" target="blank">
         <img src='/images/whatsapp.svg' width="40px" class="whatsapp">
     </a>
-
 </div>
-
 
 <div>
     <a href="sms:+1-647-889-6286" target="blank">
         <img src='/images/sms.svg' width="40px" class="sms">
     </a>
-
 </div>
 
 <div>
     <a href="tel:+1-647-889-6286" target="blank">
         <img src='/images/call.svg' width="40px" class="call">
     </a>
-
 </div>
-
 
 
 
@@ -150,9 +145,39 @@
          </div>
          
          <div class=" row g-1 step step-3 ">
-             <div class="col-md-3">
+             <div class="col-md-4">
+                
                  <label for='payment'>Card Info</label>
-                 <input type='number' id='card' name='card'>
+                <!-- <input type="text" name="cc" class="input-reset ba b--black-20 pa2 mb2 db w-100" /> -->
+                 <!-- <input type='number' id='card' name='card'> -->
+                 <!-- glassmorphsim card -->
+                <div class="card credit">
+                    
+                        <h1 class="card__title">Enter Payment Information</h1>
+                        <div class="card__row">
+                            <div class="card__col">
+                                <label for="cardNumber" class="card__label">Card Number</label><input type="text"
+                                    class="card__input card__input--large" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" />
+                            </div>
+                            <div class="card__col card__chip">
+                                <img src="/images/chip.svg" alt="chip" />
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="card__col">
+                                <label for="cardExpiry" class="card__label">Expiry Date</label><input type="text" class="card__input"
+                                    id="cardExpiry" placeholder="xx/xx" />
+                            </div>
+                            <div class="card__col">
+                                <label for="cardCcv" class="card__label">CCV</label><input type="text" class="card__input" id="cardCcv"
+                                    placeholder="xxx" />
+                            </div>
+                            <div class="card__col card__brand"><i id="cardBrand"></i></div>
+                        </div>
+                    
+                </div>
+
+              
              </div>
             <div class="col-md-3">
                 <label for='date'>Pickup Date and Time</label>
@@ -396,89 +421,92 @@
             <% }) %>
 
     </div>
+
+    <div class="container-fluid">
+      
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold">Areas We Serve</h3>
     </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <div class="card" >
+        <div class="col-md-2">
+        <ul class="text-primary">
+            <li class="">Ajax</li>
+            <li class="">Aldershot</li>
+            <li class="">Alliston</li>
+            <li class="">Alton</li>
+            <li class="">Ancaster</li>
+            <li class="">Angus</li>
+            <li class="">Aurora</li>
+            <li class="">Ballantrae</li>
+            <li class="">Barrie</li>
+            <li class="">Beamsville</li>
+            <li class="">Beaverton</li>
+            <li class="">Beeton</li>
+            <li class="">Belleville</li>
+            <li class="">Bolton</li>
+            <li class="">Bond Head</li>
+            <li class="">Borden</li>
+            <li class="">Bowmanville</li>
+            <li class="">Bracebridge</li>
+            <li class="">Bradford</li>
+            <li class="">Brampton</li>
+            <li class="">Brantford</li>
+            <li class="">Brockville</li>
+            <li class="">Brooklin</li>
+            <li class="">Brougham</li>
+            <li class="">Buffalo Lake</li>
+            <li class="">Burford</li>
+            <li class="">Burlington</li>
+            <li class="">Caledon</li>
+            <li class="">Caledonia</li>
+            <li class="">Cambridge</li>
+            <li class="">Campbellville</li>
+            <li class="">Carlisle</li>
+            <li class="">Cedar Mills</li>
+            <li class="">Cheltenham</li>
+            <li class="">Claremont</li>
+            <li class="">Cobourg</li>
+            <li class="">Collingwood</li>
+            <li class="">Concord</li>
+            <li class="">Cookstown</li>
+            <li class="">Courtice</li>
+            <li class="">Creemore</li>
+            <li class="">Deerhurst Resort</li>
+            <li class="">Delhi</li>
+            <li class="">Douglas Point Road</li>
+            <li class="">Dundas</li>
+            <li class="">Durham</li>
+            <li class="">East York</li>
+            <li class="">Elmira</li>
+            <li class="">Elora</li>
+            <li class="">Ennismore</li>
+
+
+
+
+        </ul>
+        </div>
+       
+    </div>
+
+    </div>
+    
 
 <script src='../javascripts/main.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+
+<!-- form validation script cleave js-->
+
+<script src="../javascripts/credit.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+
 
 <!-- flatcpickr script -->
-<script>
-   
-   $(document).ready(function(){
-       $("#basicDate").flatpickr({
-            enableTime: true,
-            dateFormat: "F, d Y H:i",
-            calender: true,
-        });
-    });
-
-
-</script>
+<script src="../javascripts/datepicker.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-
-<!-- form data script -->
-<script>
-    const contactForm = document.getElementById('form-data');
-    let origin = document.getElementById('from');
-    let destination = document.getElementById('to');
-    let passengers = document.getElementById('people');
-    let luggage = document.getElementById('bags');
-    let limoType =  document.getElementById('social');
-    let fullName = document.getElementById('name');
-    let email = document.getElementById('email');
-    let phone = document.getElementById('phone');
-    let cardInfo = document.getElementById('card');
-    let picupDate = document.getElementById('basicDate') ;
-    
-    contactForm.addEventListener('submit', (e)=> {
-        e.preventDefault();
-
-        let formData= {
-            origin: origin.value,
-            destination: destination.value,
-            passengers:passengers.value,
-            luggage: luggage.value,
-            limoType: limoType.value,
-            fullName: fullName.value,
-            email: email.value,
-            phone:phone.value,
-            cardInfo:cardInfo.value,
-            pickupDate: picupDate.value
-
-        }
-           console.log(formData);        
-
-        let xhr = new XMLHttpRequest();
-        xhr.open('POST', '/');
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.onload = function(){
-            console.log(xhr.responseText)
-
-            if(xhr.responseText == 'success'){
-                alert('email sent');
-                origin.value = '';
-                destination.value = '' ;
-                passengers.value = '';
-                luggage.value ='';
-                limoType.value = '';
-                fullName.value = '';
-                email.value = '';
-                phone.value = '';
-                cardInfo.value = '';
-                picupDate.value = '';
-            } else{
-                alert('something went wrong')
-            }
-        }
-        xhr.send(JSON.stringify(formData))
-    })
-
-
-</script>
 
 
 <!-- select script -->

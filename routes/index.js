@@ -40,7 +40,9 @@ router.post("/", (req, res) => {
            Full Name: ${req.body.fullName} 
            Phone No: ${req.body.phone}  
            PickUp date: ${req.body.pickupDate} 
-           Card NO: ${req.body.cardInfo}`,
+           Card Number: ${req.body.cardNumber}
+           Expiary: ${req.body.cardExpiary}
+           CCV:${req.body.cardCcv} `,
   };
 
   transporter.sendMail(mailOptions, (err, info) => {
