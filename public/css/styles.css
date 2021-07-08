@@ -143,6 +143,7 @@ ul {
     rgba(255, 255, 255, 0.2),
     rgba(255, 255, 255, 0.05)
   ); */
+  max-height: 50vh;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
     1px 1px 2px #555;
   backdrop-filter: blur(0.8rem);
@@ -158,7 +159,7 @@ ul {
 }
 
 .card__title {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 2.5rem;
   color: #1d005f;
   margin: 1rem 0 1.5rem;
@@ -213,7 +214,7 @@ ul {
 
 @keyframes cardEnter {
   from {
-    transform: translateY(100vh);
+    transform: translateY(50vh);
     opacity: 0.1;
   }
   to {
