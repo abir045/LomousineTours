@@ -157,7 +157,6 @@ ul {
 .card__row {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 0.5rem;
 }
 
 .card__title {
