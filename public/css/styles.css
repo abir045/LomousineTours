@@ -8,6 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  height: 100vh;
 }
 
 .heading {
@@ -216,7 +217,7 @@ ul {
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
-/* @keyframes cardEnter {
+@keyframes cardEnter {
   from {
     transform: translateY(50vh);
     opacity: 0.1;
@@ -225,4 +226,4 @@ ul {
     transform: translateY(0);
     opacity: 1;
   }
-} */
+}
