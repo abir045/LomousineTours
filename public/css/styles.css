@@ -193,7 +193,7 @@ ul {
 }
 
 .card__label {
-  display: block;
+  display: flex;
   color: #fff;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   font-weight: 400;
