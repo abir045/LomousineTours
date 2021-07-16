@@ -41,7 +41,7 @@ router.post("/", (req, res) => {
       host: "smtp.gmail.com",
       // port: 465,
       // secure: true,
-      // service: "gmail",
+      service: "gmail",
 
       auth: {
         user: process.env.GMAIL_USERNAME,
