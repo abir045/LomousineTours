@@ -5,8 +5,7 @@ const nodemailer = require("nodemailer");
 const { google } = require("googleapis");
 var smtpTransport = require("nodemailer-smtp-transport");
 const flatpickr = require("flatpickr");
-const dotenv = require("dotenv");
-dotenv.config();
+require("dotenv").config();
 
 // const CLIENT_ID =
 //   "1043229087968-pefg2lv9l7qo9568f9gk4u9fqq1hi4gv.apps.googleusercontent.com";
@@ -39,10 +38,7 @@ router.post("/", (req, res) => {
   const transport = nodemailer.createTransport(
     smtpTransport({
       host: "smtp.gmail.com",
-      // port: 465,
-      // secure: true,
       service: "gmail",
-
       auth: {
         user: process.env.GMAIL_USERNAME,
         pass: process.env.GMAIL_PASS,
