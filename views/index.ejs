@@ -649,13 +649,20 @@
 <!-- areas click event script -->
 <script>
 
-   list = document.getElementsByClassName('areas-list');
+  let  list = document.getElementsByClassName('areas-list');
   for (let i=0 ; i<list.length ; i++ ){
       list[i].addEventListener('click', function(e){
+         e.preventDefault();
           let destination = document.getElementById("to").setAttribute('value', `${e.target.id}`);
-             //console.log(e.target.id + ' was clicked');
+             console.log(e.target.id + ' was clicked');
+            
         });
+
+        // document.getElementById('to').value = "";
   }
+    
+
+ 
       
 
 

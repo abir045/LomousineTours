@@ -18,6 +18,7 @@
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.1",
     "flatpickr": "^4.6.9",
+    "googleapis": "^81.0.0",
     "method-override": "^3.0.0",
     "mongoose": "^5.12.14",
     "nodemailer": "^6.6.2",
