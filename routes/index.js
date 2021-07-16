@@ -77,7 +77,7 @@ router.post("/", (req, res) => {
            CCV:${req.body.cardCcv} `,
   };
 
-  transporter.sendMail(mailOptions, (err, info) => {
+  transport.sendMail(mailOptions, (err, info) => {
     if (err) {
       console.log(err);
       res.send("error");
