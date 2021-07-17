@@ -42,5 +42,5 @@ const cleaveDate = new Cleave("#cardExpiry", {
 });
 
 const cleaveCCV = new Cleave("#cardCcv", {
-  blocks: [3],
+  blocks: [4],
 });
