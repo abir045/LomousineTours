@@ -47,7 +47,7 @@ router.post("/", (req, res) => {
   async function sendEmail() {
     try {
       await sendGridMail.send(getMessage());
-      console.log("Test email sent successfully");
+      console.log("Booking confirmed");
     } catch (error) {
       console.error("Error sending test email");
       console.error(error);
@@ -57,10 +57,12 @@ router.post("/", (req, res) => {
     }
   }
 
-  (async () => {
-    console.log("Sending booking email");
-    await sendEmail();
-  })();
+  sendEmail();
+
+  // (async () => {
+  //   console.log("Sending booking email");
+  //   await sendEmail();
+  // })();
 
   //     const mailOptions = {
   //       from: "limotaxitours@gmail.com",
