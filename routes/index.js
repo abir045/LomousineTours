@@ -32,7 +32,7 @@ router.post("/", (req, res) => {
             PickUp: ${req.body.origin}
             Destination: ${req.body.destination}
             Luggages: ${req.body.luggage}
-            limoType:${req.body.limotype}
+            limoType:${req.body.limoType}
             Number of passengers: ${req.body.passengers}
             Full Name: ${req.body.fullName}
             Phone No: ${req.body.phone}
