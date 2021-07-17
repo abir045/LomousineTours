@@ -10,6 +10,8 @@ const methodOverride = require("method-override");
 const indexRouter = require("./routes/index");
 const carRouter = require("./routes/cars");
 const limoRouter = require("./routes/limousines");
+const sendGridMail = require("@sendgrid/mail");
+sendGridMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
