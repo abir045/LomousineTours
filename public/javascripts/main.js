@@ -71,7 +71,7 @@ contactForm.addEventListener("submit", (e) => {
     console.log(xhr.responseText);
 
     if (xhr.responseText == "success") {
-      alert("email sent");
+      alert("Booking confirmed");
       origin.value = "";
       destination.value = "";
       passengers.value = "";

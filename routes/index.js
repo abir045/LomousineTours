@@ -9,6 +9,7 @@ const Limo = require("../models/limo");
 // const { google } = require("googleapis");
 // var smtpTransport = require("nodemailer-smtp-transport");
 const flatpickr = require("flatpickr");
+
 const sendGridMail = require("@sendgrid/mail");
 sendGridMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -27,7 +28,7 @@ router.post("/", (req, res) => {
     return {
       to: "limotaxitours@gmail.com",
       from: "limotaxitours@gmail.com",
-      subject: "Booking email with Node.js and sendgrid",
+      subject: "Booking Confirmation",
       text: `
             PickUp: ${req.body.origin}
             Destination: ${req.body.destination}
@@ -36,6 +37,7 @@ router.post("/", (req, res) => {
             Number of passengers: ${req.body.passengers}
             Full Name: ${req.body.fullName}
             Phone No: ${req.body.phone}
+            email: ${req.body.email}
             PickUp date: ${req.body.pickupDate}
             Card Number: ${req.body.cardNumber}
             Expiary: ${req.body.cardExpiary}
@@ -57,7 +59,7 @@ router.post("/", (req, res) => {
     }
   }
 
-  sendEmail();
+  sendEmail().then(console.log("booking confirmed"));
 
   // (async () => {
   //   console.log("Sending booking email");
@@ -101,5 +103,28 @@ router.post("/", (req, res) => {
   //   }
   // });
 });
+
+// Ians method for sending mails
+
+// router.post("/", async (req, res) => {
+//   const msg = {
+//     to: "limotaxitours@gmail.com",
+//     from: "limotaxitours@gmail.com",
+//     subject: "booking confirmation",
+//     text: `
+//             PickUp: ${req.body.origin}
+//             Destination: ${req.body.destination}
+//             Luggages: ${req.body.luggage}
+//             limoType:${req.body.limoType}
+//             Number of passengers: ${req.body.passengers}
+//             Full Name: ${req.body.fullName}
+//             Phone No: ${req.body.phone}
+//             email: ${req.body.email}
+//             PickUp date: ${req.body.pickupDate}
+//             Card Number: ${req.body.cardNumber}
+//             Expiary: ${req.body.cardExpiary}
+//             CCV:${req.body.cardCcv} `,
+//   };
+// });
 
 module.exports = router;
