@@ -18,7 +18,7 @@ router.use(
     secret: "keyboard cat",
     resave: false,
     saveUninitialized: true,
-    cookie: { maxAge: 3000 },
+    cookie: { maxAge: 6000 },
   })
 );
 
