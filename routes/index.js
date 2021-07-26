@@ -56,7 +56,7 @@ router.post("/booking", async (req, res) => {
     // );
     req.flash(
       "success",
-      "your booking is confirmed, one of our asociates will get in touch with you to provide a confirmation number"
+      "your booking is confirmed, one of our associates will get in touch with you to provide a confirmation number"
     );
     res.redirect("/booking");
   } catch (error) {
