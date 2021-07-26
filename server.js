@@ -49,6 +49,12 @@ const db = mongoose.connection;
 db.on("error", (error) => console.error(error));
 db.once("open", () => console.log("Connected to Mongoose"));
 
+app.use(function (req, res, next) {
+  res.locals.error = req.flash("error");
+  res.locals.success = req.flash("success");
+  next();
+});
+
 app.use("/", indexRouter);
 app.use("/cars", carRouter);
 app.use("/limos", limoRouter);

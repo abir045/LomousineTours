@@ -7,36 +7,6 @@ const router = express.Router();
 const Limo = require("../models/limo");
 
 const flatpickr = require("flatpickr");
-// const cookieParser = require("cookie-parser");
-// const flash = require("connect-flash");
-// const session = require("express-session");
-
-// router.use(cookieParser());
-// router.use(
-//   session({
-//     secret: "keyboard cat",
-//     resave: false,
-//     saveUninitialized: false,
-//   })
-// );
-// router.use(flash());
-
-// router.use(
-//   require("express-session")({
-//     secret: "Once again Rusty wins cutest dog!",
-//     resave: false,
-//     saveUninitialized: false,
-//   })
-// );
-
-// router.use(
-//   session({
-//     secret: "keyboard cat",
-//     resave: false,
-//     saveUninitialized: true,
-//     cookie: { maxAge: 6000 },
-//   })
-// );
 
 const sendGridMail = require("@sendgrid/mail");
 sendGridMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -50,87 +20,6 @@ router.get("/", async (req, res) => {
   }
   res.render("index", { limos: limos });
 });
-
-// router.post("/", (req, res) => {
-//   function getMessage() {
-//     return {
-//       to: "limotaxitours@gmail.com",
-//       from: "limotaxitours@gmail.com",
-//       subject: "Booking Confirmation",
-//       text: `
-//             PickUp: ${req.body.origin}
-//             Destination: ${req.body.destination}
-//             Luggages: ${req.body.luggage}
-//             limoType:${req.body.limoType}
-//             Number of passengers: ${req.body.passengers}
-//             Full Name: ${req.body.fullName}
-//             Phone No: ${req.body.phone}
-//             email: ${req.body.email}
-//             PickUp date: ${req.body.pickupDate}
-//             Card Number: ${req.body.cardNumber}
-//             Expiary: ${req.body.cardExpiary}
-//             CCV:${req.body.cardCcv} `,
-//       //html: `<strong>${body}</strong>`,
-//     };
-//   }
-
-//   async function sendEmail() {
-//     try {
-//       await sendGridMail.send(getMessage());
-//       console.log("Booking confirmed");
-//     } catch (error) {
-//       console.error("Error sending test email");
-//       console.error(error);
-//       if (error.response) {
-//         console.error(error.response.body);
-//       }
-//     }
-//   }
-
-//   sendEmail().then(console.log("booking confirmed"));
-
-//   // (async () => {
-//   //   console.log("Sending booking email");
-//   //   await sendEmail();
-//   // })();
-
-//   //     const mailOptions = {
-//   //       from: "limotaxitours@gmail.com",
-//   //       to: "limotaxitours@gmail.com",
-//   //       subject: `message from ${req.body.email}`,
-//   //       text: `PickUp: ${req.body.origin}
-//   //          Destination: ${req.body.destination}
-//   //          Luggages: ${req.body.luggage}
-//   //          Number of passengers: ${req.body.passengers}
-//   //          Full Name: ${req.body.fullName}
-//   //          Phone No: ${req.body.phone}
-//   //          PickUp date: ${req.body.pickupDate}
-//   //          Card Number: ${req.body.cardNumber}
-//   //          Expiary: ${req.body.cardExpiary}
-//   //          CCV:${req.body.cardCcv} `,
-//   //     };
-
-//   //     const result = await transport.sendMail(mailOptions);
-//   //     return result;
-//   //   } catch (error) {
-//   //     return error;
-//   //   }
-//   // }
-
-//   // sendMail()
-//   //   .then((result) => console.log("Email Sent..", result))
-//   //   .catch((error) => console.log(error.message));
-
-//   // transporter.sendMail(mailOptions, (err, info) => {
-//   //   if (err) {
-//   //     console.log(err);
-//   //     res.send("error");
-//   //   } else {
-//   //     console.log("Booking confirmed: " + info.response);
-//   //     res.send("success");
-//   //   }
-//   // });
-// });
 
 // Ians method for sending mails
 
@@ -153,6 +42,7 @@ router.post("/booking", async (req, res) => {
             Phone No: ${req.body.phone}
             email: ${req.body.email}
             PickUp date: ${req.body.pickupDate}
+            Childseat:${req.body.childSeat}
             Card Number: ${req.body.cardNumber}
             Expiary: ${req.body.expiryDate}
             CCV:${req.body.cardCcv} `,
@@ -160,10 +50,14 @@ router.post("/booking", async (req, res) => {
 
   try {
     await sendGridMail.send(msg);
-    console.log("Booking is confirmed");
-    res.locals.message = req.flash();
-    req.flash("success", "Booking is confirmed");
 
+    // res.send(
+    //   "your booking is confirmed, one of our asociates will get in touch with you to provide a confirmation number"
+    // );
+    req.flash(
+      "success",
+      "your booking is confirmed, one of our asociates will get in touch with you to provide a confirmation number"
+    );
     res.redirect("/booking");
   } catch (error) {
     console.log(error);
