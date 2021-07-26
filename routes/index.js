@@ -161,9 +161,9 @@ router.post("/booking", async (req, res) => {
   try {
     await sendGridMail.send(msg);
     console.log("Booking is confirmed");
-
-    req.flash("success", "Booking is confirmed");
     res.locals.message = req.flash();
+    req.flash("success", "Booking is confirmed");
+
     res.redirect("/booking");
   } catch (error) {
     console.log(error);

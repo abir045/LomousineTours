@@ -12,7 +12,7 @@
 
         <form class="form-floating" action="/booking" method='POST' id='form-data'>
 
-            <div class="row g-0 bg-secondary mb-5">
+            <div class="row g-0  mb-5">
                 <div class="col-md-3 ">
                     <div class="form-floating ">
                         <input type='text' id='from' placeholder="From" class='form-control' name='from' value=""
@@ -77,26 +77,27 @@
                 </div>
 
                 <div class="col-md-2 dropdown">
-
-
-                    <a class="btn btn-light btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="form-floating">
+                    <button class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-expanded="true">
                         Select Limo Type
-                    </a>
-                   
+                </button>
+                    
+                    <!-- <ul class="" aria-labelledby="dropdownMenuLink"> -->
+                    <select id='social' name='limo' style='width: 300px;'>
+                        <option value="sedan">Sedan &nbsp;&nbsp;<p class='fst-italic'>55$/HR</p>
+                        </option>
+                        <option value="suv">SUV &nbsp;&nbsp;&nbsp;<span>75$/HR</span></option>
+                        <option value="largesuv">Large SUV &nbsp;&nbsp;<span>95$/HR</span></option>
+                        <option value="van">Van &nbsp;&nbsp; <span>115$/HR</span></option>
+                        <option value="largevan">Large Van &nbsp;&nbsp;<span>135$/HR</span></option>
+                    </select>
+                        <!-- </ul> -->
+                       
+                </div>
 
-
-
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <select id='social' name='limo' style='width: 300px;'>
-                            <option class='fst-italic' value="sedan">Sedan &nbsp;&nbsp;<p class='fst-italic'>55$/HR</p>
-                            </option>
-                            <option value="suv">SUV &nbsp;&nbsp;&nbsp;<span>75$/HR</span></option>
-                            <option value="largesuv">Large SUV &nbsp;&nbsp;<span>95$/HR</span></option>
-                            <option value="van">Van &nbsp;&nbsp; <span>115$/HR</span></option>
-                            <option value="largevan">Large Van &nbsp;&nbsp;<span>135$/HR</span></option>
-                        </select>
-                    </ul>
+                    
+                
                     <!-- <button type='button' class='btn btn-info next'>Next</button> -->
                     <!-- <input class='btn btn-info' name='SubmitButton' type='submit' value='submit'> -->
 
