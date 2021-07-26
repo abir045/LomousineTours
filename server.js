@@ -11,6 +11,9 @@ const indexRouter = require("./routes/index");
 const carRouter = require("./routes/cars");
 const limoRouter = require("./routes/limousines");
 
+const session = require("express-session");
+const flash = require("connect-flash");
+
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.set("layout", "layouts/layout");
@@ -26,6 +29,16 @@ app.use(express.json());
 //app.use(express.static("public"));
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
+app.use(
+  session({
+    secret: "secret",
+    cookie: { maxAge: 60000 },
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+app.use(flash());
 
 const mongoose = require("mongoose");
 mongoose.connect(process.env.DATABASE_URL, {

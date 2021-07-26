@@ -19,7 +19,7 @@ a:hover {
   color: black;
   text-decoration: none;
   font-weight: bold;
-  padding-right: 7rem;
+  padding-right: 5rem;
 }
 
 .dropdown-item {
@@ -33,5 +33,6 @@ a:hover {
 }
 
 .logo {
-  padding-right: 5rem;
+  height: 100px;
+  padding-right: 2rem;
 }

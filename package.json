@@ -16,6 +16,7 @@
     "card": "^2.5.3",
     "card-js": "^1.0.13",
     "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.1",
@@ -27,10 +28,10 @@
     "nodemailer": "^6.6.2",
     "nodemailer-smtp-transport": "^2.7.4",
     "payment": "^2.4.4",
-    "req-flash": "0.0.3",
     "select2": "^4.1.0-rc.0"
   },
   "devDependencies": {
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "req-flash": "0.0.3"
   }
 }

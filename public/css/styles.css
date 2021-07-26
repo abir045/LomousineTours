@@ -120,12 +120,8 @@ hr {
 
 .form-group {
   width: 100%;
-  margin-top: 10px;
-}
-
-.form-group {
-  width: 100%;
   padding: 5px;
+  margin-top: 10px;
   border-radius: 4px;
 }
 

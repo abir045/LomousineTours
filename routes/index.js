@@ -5,22 +5,38 @@ if (process.env.NODE_ENV !== "production") {
 const express = require("express");
 const router = express.Router();
 const Limo = require("../models/limo");
-// const nodemailer = require("nodemailer");
-// const { google } = require("googleapis");
-// var smtpTransport = require("nodemailer-smtp-transport");
-const flatpickr = require("flatpickr");
-const flash = require("connect-flash");
-const session = require("express-session");
-router.use(flash());
 
-router.use(
-  session({
-    secret: "keyboard cat",
-    resave: false,
-    saveUninitialized: true,
-    cookie: { maxAge: 6000 },
-  })
-);
+const flatpickr = require("flatpickr");
+// const cookieParser = require("cookie-parser");
+// const flash = require("connect-flash");
+// const session = require("express-session");
+
+// router.use(cookieParser());
+// router.use(
+//   session({
+//     secret: "keyboard cat",
+//     resave: false,
+//     saveUninitialized: false,
+//   })
+// );
+// router.use(flash());
+
+// router.use(
+//   require("express-session")({
+//     secret: "Once again Rusty wins cutest dog!",
+//     resave: false,
+//     saveUninitialized: false,
+//   })
+// );
+
+// router.use(
+//   session({
+//     secret: "keyboard cat",
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: { maxAge: 6000 },
+//   })
+// );
 
 const sendGridMail = require("@sendgrid/mail");
 sendGridMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -118,7 +134,11 @@ router.get("/", async (req, res) => {
 
 // Ians method for sending mails
 
-router.post("/", async (req, res) => {
+router.get("/booking", (req, res) => {
+  res.render("booking");
+});
+
+router.post("/booking", async (req, res) => {
   const msg = {
     to: "limotaxitours@gmail.com",
     from: "limotaxitours@gmail.com",
@@ -140,8 +160,11 @@ router.post("/", async (req, res) => {
 
   try {
     await sendGridMail.send(msg);
+    console.log("Booking is confirmed");
+
     req.flash("success", "Booking is confirmed");
-    res.redirect("back");
+    res.locals.message = req.flash();
+    res.redirect("/booking");
   } catch (error) {
     console.log(error);
     if (error.response) {
