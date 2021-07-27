@@ -75,7 +75,7 @@ router.get("/:id/edit", async (req, res) => {
   }
 });
 
-//update book route
+//update limo route
 router.put("/:id", async (req, res) => {
   let limo;
   try {
