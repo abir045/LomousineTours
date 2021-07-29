@@ -4,8 +4,12 @@
 
 
 <div class="container-fluid mt-5">
-
-
+        
+        <div class="col-md-2">
+            <button class='btn btn-info btn-lg' onclick="calcRoute();">
+                <i class='fas fa-directions'></i>
+            </button>
+        </div>
 
         <form class="form-floating" action="/booking" method='POST' id='form-data'>
 
@@ -25,103 +29,69 @@
 
                     </div>
                 </div>
-                <div class="col-md-2">
-                    <div class="form-floating">
-                        <select class="form-select" id="people" name='people'
-                            aria-label="Floating label select example">
-                            <option selected>1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                        </select>
-                        <label class="fw-bold fs-5" for="floatingSelectGrid">People</label>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="form-floating">
-                        <select class="form-select" id="bags" name='bags' aria-label="Floating label select example">
-                            <option selected>1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-
-                        </select>
-                        <label class="fw-bold fs-5" for="floatingSelectGrid">Bags</label>
-                    </div>
-
-                </div>
-
-                <div class="col-md-2 dropdown">
-                <div class="form-floating">
-                    <button class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-expanded="true">
-                        Select Limo Type
-                </button>
-                    
-                    <!-- <ul class="" aria-labelledby="dropdownMenuLink"> -->
-                    <select id='social' name='limo' style='width: 300px;'>
-                        <option value="sedan">Sedan &nbsp;&nbsp;<p class='fst-italic'>55$/HR</p>
-                        </option>
-                        <option value="suv">SUV &nbsp;&nbsp;&nbsp;<span>75$/HR</span></option>
-                        <option value="largesuv">Large SUV &nbsp;&nbsp;<span>95$/HR</span></option>
-                        <option value="van">Van &nbsp;&nbsp; <span>115$/HR</span></option>
-                        <option value="largevan">Large Van &nbsp;&nbsp;<span>135$/HR</span></option>
-                    </select>
-                        <!-- </ul> -->
-                       
-                </div>
-
-                    
                 
-                    <!-- <button type='button' class='btn btn-info next'>Next</button> -->
-                    <!-- <input class='btn btn-info' name='SubmitButton' type='submit' value='submit'> -->
+                      
+                
+               
+              
+            </div>
 
-
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <div class="container-fluid">
+                        <div id='googleMap'>
+                        </div>
+                        <div id='output'>
+                
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
 
             <div class="row g-0 mb-5">
-                <div class="col-md-4">
+                <div class="col-md-2">
+                    <label for='date'>Pickup Date and Time</label>
+                
+                    <input type="number" id="basicDate" placeholder="Please select Date Time" name='pickupDate' data-input>
+                
+                </div>
+                <div class="col-md-3">
                     <label for='name'> Name</label>
                     <input type='text' id='name' name='name'>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <label for='email'>Email</label>
                     <input type='email' id='email' name='email'>
 
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2">
                     <label for='phone'>Phone</label>
                     <input type='number' id='phone' name='phone'>
 
                 </div>
-                <!-- <div class="col-md-3">
-                    <button type='button' class='btn btn-warning prev'>Prev</button>
-                    <button type='button' class='btn btn-info next'>Next</button>
 
-                </div> -->
+                <div class="col-md-2 dropdown">
+                    <div class="form-floating">
+                        <button class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="true">
+                            Select Limo Type
+                        </button>
+                
+                        <!-- <ul class="" aria-labelledby="dropdownMenuLink"> -->
+                        <select id='social' name='limo' style='width: 300px;'>
+                            <option value="sedan">Sedan &nbsp;&nbsp;<p class='fst-italic'>55$/HR</p>
+                            </option>
+                            <option value="suv">SUV &nbsp;&nbsp;&nbsp;<span>75$/HR</span></option>
+                            <option value="largesuv">Large SUV &nbsp;&nbsp;<span>95$/HR</span></option>
+                            <option value="van">Van &nbsp;&nbsp; <span>115$/HR</span></option>
+                            <option value="largevan">Large Van &nbsp;&nbsp;<span>135$/HR</span></option>
+                        </select>
+                        <!-- </ul> -->
+                
+                    </div>   
+                </div>
 
             </div>
 
@@ -158,13 +128,7 @@
                 </div>
 
 
-                <div class="col-md-4">
-                    <label for='date'>Pickup Date and Time</label>
-
-                    <input type="number" id="basicDate" placeholder="Please select Date Time" name='pickupDate'
-                        data-input>
-
-                </div>
+          
 
 
 
@@ -182,18 +146,56 @@
                 
                 </div>
 
-                <!-- <div class="col-md-4">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" name='childSeat'>
-                        <label class="form-check-label" for="flexCheckIndeterminate">
-                            Child Seat 
-                        </label>
+                <div class="col-md-2">
+                    <div class="form-floating">
+                        <select class="form-select" id="people" name='people' aria-label="Floating label select example">
+                            <option selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                        </select>
+                        <label class="fw-bold fs-5" for="floatingSelectGrid">People</label>
                     </div>
-
                 </div>
+
+                <div class="col-md-2">
+                    <div class="form-floating">
+                        <select class="form-select" id="bags" name='bags' aria-label="Floating label select example">
+                            <option selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
                 
+                        </select>
+                        <label class="fw-bold fs-5" for="floatingSelectGrid">Bags</label>
+                    </div>
+                
+                </div>
+
+
                
-            </div> -->
 
             <div class="row g-1 mb-5">
                 <div class="col-md-3">
@@ -210,6 +212,8 @@
 
     
     </form>
+
+  
     </div>
 
 
@@ -248,8 +252,98 @@
 
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
+<script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPVTJqtbtQxwLaBcdwGIv56MuSSJqXXoY&libraries=places">
+    </script>
 
 <script>
+
+    //set map options
+
+    var myLatlng = { lat: 43.651070, lng: -79.347015 };
+    var mapOptions = {
+        center: myLatlng,
+        zoom: 7,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    //create Map 
+
+    var map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+
+    //create a directions service object to use the route method and get a result for our request
+
+    var directionsService = new google.maps.DirectionsService();
+
+    // create a directions renderer object which we will use to display the route
+
+    var directionsDisplay = new  google.maps.DirectionsRenderer();
+
+    //bind the directionsRenderer to the map
+
+    directionsDisplay.setMap(map);
+
+    //function
+
+    function calcRoute() {
+        //create request
+        var request = {
+            origin: document.getElementById('from').value,
+            destination: document.getElementById('to').value,
+            travelMode: google.maps.TravelMode.DRIVING, //driving distance
+            unitSystem: google.maps.UnitSystem.METRIC
+        }
+
+        //pass the request to the route method
+
+       directionsService.route(request, (result, status) => {
+           if(status == google.maps.DirectionsStatus.OK){
+              // get distance and time
+            const output = document.querySelector('#output');
+            output.innerHTML = 
+            "<div class='alert-info'> From: " + document.getElementById("from").value +
+            ".<br/>To:" + document.getElementById('to').value + 
+            ".<br/> Driving distance <i class='fas fa-road'></i>:" +
+             result.routes[0].legs[0].distance.text +
+            ".<br/>Duration <i class='fas fa-hourglass-start'></i> : " + 
+            result.routes[0].legs[0].duration.text +".<div/>";
+
+                //display route
+                directionsDisplay.setDirections(result);
+
+           } else{
+               //delete route from  map
+               directionsDisplay.setDirections({routes: []});
+               
+               //center map in toronto
+               map.setCenter(myLatlng);
+
+               //show error message
+               output.innerHTML = "<div class='alert-danger'> <i class='fas fa-exclamation-triangle'></i> Could not retrieve driving distance.  </div>";
+           }
+       })
+    }
+
+    //create auto complete objects for all input
+
+    var options = {
+            types: ["establishment", "geocode"],
+            componentRestrictions: { 'country': ['CA'] },
+            fields: ['place_id', 'geometry', 'name']
+        }
+
+    var input1 = document.getElementById('from');
+    var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
+
+    var input2 = document.getElementById('to');
+    var autocomplete2 = new google.maps.places.Autocomplete(input2, options);
+
+
+
+
+</script>
+
+<!-- <script>
     let autocomplete;
     function initAutocomplete() {
 
@@ -268,10 +362,9 @@
 
 
     }
+    
+</script> -->
 
 
-</script>
 
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPVTJqtbtQxwLaBcdwGIv56MuSSJqXXoY&libraries=places&callback=initAutocomplete">
-    </script>
+
