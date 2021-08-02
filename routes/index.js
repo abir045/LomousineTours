@@ -9,6 +9,7 @@ const Limo = require("../models/limo");
 const flatpickr = require("flatpickr");
 
 const sendGridMail = require("@sendgrid/mail");
+const limo = require("../models/limo");
 sendGridMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 router.get("/", async (req, res) => {
@@ -23,11 +24,24 @@ router.get("/", async (req, res) => {
 
 // Ians method for sending mails
 
-router.get("/booking", (req, res) => {
-  res.render("booking");
+router.get("/booking", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+  res.render("booking", { limos: limos });
 });
 
 router.post("/booking", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
   const msg = {
     to: "limotaxitours@gmail.com",
     from: "limotaxitours@gmail.com",
@@ -35,6 +49,7 @@ router.post("/booking", async (req, res) => {
     text: `
             PickUp: ${req.body.from}
             Destination: ${req.body.to}
+            distance: ${req.body.output}
             Luggages: ${req.body.bags}
             limoType:${req.body.limo}
             Number of passengers: ${req.body.people}

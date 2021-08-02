@@ -16,10 +16,16 @@ const limoSchema = new mongoose.Schema({
     required: true,
   },
 
+  pricePerKm: {
+    type: Number,
+    required: true,
+  },
+
   pricePerDay: {
     type: Number,
     required: true,
   },
+
   airportTransfer: {
     type: Number,
     required: true,

@@ -78,22 +78,60 @@
                             data-bs-toggle="dropdown" aria-expanded="true">
                             Select Limo Type
                         </button>
+
+                        
                 
-                        <!-- <ul class="" aria-labelledby="dropdownMenuLink"> -->
+                        <ul class="" aria-labelledby="dropdownMenuLink">
                         <select id='social' name='limo' style='width: 300px;'>
-                            <option value="sedan">Sedan &nbsp;&nbsp;<p class='fst-italic'>55$/HR</p>
-                            </option>
-                            <option value="suv">SUV &nbsp;&nbsp;&nbsp;<span>75$/HR</span></option>
-                            <option value="largesuv">Large SUV &nbsp;&nbsp;<span>95$/HR</span></option>
-                            <option value="van">Van &nbsp;&nbsp; <span>115$/HR</span></option>
-                            <option value="largevan">Large Van &nbsp;&nbsp;<span>135$/HR</span></option>
-                        </select>
-                        <!-- </ul> -->
+                           
+                       
+                            <option id='SEDAN' value='sedan'></option>
+                            <option id='SUV' value="suv"></option>
+                            <option id='Slimo' value="strechLimo"></option>
+                            <option id='partyBus' value="partyBus"> </option>
+                            
+                        </select> 
+                        </ul>
                 
                     </div>   
                 </div>
 
             </div>
+
+            <!-- <% limos.forEach(limo=> { %>
+                
+                <div class="row g-0">
+                    <div class="col-md-2">
+                        <div class="card" >
+                            <a href="/limos/<%= limo.id %>">
+                               
+            
+                                <img src="<%= limo.coverImagePath %>" height='200' width='400' class="card-img float-left"
+                                    alt="...">
+                            </a>
+            
+                            <div class="card-body">
+                                <h5 class="card-title text-center">
+                                    <%= limo.title %>
+                                </h5>
+                                <p class="card-text ">
+            
+                                <h6 class="text-center" id='pricePerHour'>Price Per Hour: <%= limo.pricePerHour %>$</h6>
+                                <h6 class="text-center">Price Per Day: <%= limo.pricePerDay %>$</h6>
+                                <h6 class="text-center">Airport Transfer: <%= limo.airportTransfer %>$</h6>
+                                <h6 class="text-center" id='pricePerKm'> <%= limo.pricePerKm %></h6>
+                                <h6 class="text-center" id='price'> </h6>
+                                 
+                                </p>
+                                <button type='submit' class='btn btn-info'>Book</button>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            
+                <% }) %> -->
 
             <div class="row g-1 mb-5">
                 <div class="col-md-4">
@@ -259,6 +297,7 @@
 <script>
 
     //set map options
+    
 
     var myLatlng = { lat: 43.651070, lng: -79.347015 };
     var mapOptions = {
@@ -284,8 +323,10 @@
     directionsDisplay.setMap(map);
 
     //function
+    
+  
 
-    function calcRoute() {
+     function calcRoute() {
         //create request
         var request = {
             origin: document.getElementById('from').value,
@@ -294,34 +335,66 @@
             unitSystem: google.maps.UnitSystem.METRIC
         }
 
+     
+
         //pass the request to the route method
 
        directionsService.route(request, (result, status) => {
-           if(status == google.maps.DirectionsStatus.OK){
-              // get distance and time
-            const output = document.querySelector('#output');
-            output.innerHTML = 
-            "<div class='alert-info'> From: " + document.getElementById("from").value +
-            ".<br/>To:" + document.getElementById('to').value + 
-            ".<br/> Driving distance <i class='fas fa-road'></i>:" +
-             result.routes[0].legs[0].distance.text +
-            ".<br/>Duration <i class='fas fa-hourglass-start'></i> : " + 
-            result.routes[0].legs[0].duration.text +".<div/>";
+
+    
+             if (status == google.maps.DirectionsStatus.OK) {
+                // get distance and time
+                const output = document.querySelector('#output');
+                output.innerHTML =
+                     "<div class='alert-info'> From: " + document.getElementById("from").value +
+                     ".<br/>To:" + document.getElementById('to').value + 
+                     ".<br/> Driving distance <i class='fas fa-road'></i>:" +
+                    result.routes[0].legs[0].distance.text
+                 ".<br/>Duration <i class='fas fa-hourglass-start'></i> : " + " .<br/> Price for SEDAN:"+ (result.routes[0].legs[0].distance.value / 1000) * 2
+                 ".<div/>";
+                 
+
+                const distance = result.routes[0].legs[0].distance.value;
+
+                //const price = document.getElementById('price');
+                const sedan = document.getElementById('SEDAN');
+                const suv = document.getElementById('SUV');
+                const SLimo = document.getElementById('Slimo');
+                const partyBus = document.getElementById('partyBus');
+
+
+                //const priceforDistance = document.getElementById('pricePerKm').innerHTML;
+
+
+
+               // price.innerHTML = "Price SEDAN: " + (distance / 1000) * 2 + "$";
+                
+                sedan.innerHTML = "Price Sedan: " + (distance / 1000) * 2 + "$";
+               
+                suv.innerHTML = "Price SUV : " + (distance / 1000) * 3 + "$";
+
+                SLimo.innerHTML = "Price Long Limo : " + (distance / 1000) * 4 + "$";
+
+                partyBus.innerHTML = "Price Party Bus : " + (distance / 1000) * 5  + "$";
+
 
                 //display route
                 directionsDisplay.setDirections(result);
 
-           } else{
-               //delete route from  map
-               directionsDisplay.setDirections({routes: []});
-               
-               //center map in toronto
-               map.setCenter(myLatlng);
+            } else {
+                //delete route from  map
+                directionsDisplay.setDirections({ routes: [] });
 
-               //show error message
-               output.innerHTML = "<div class='alert-danger'> <i class='fas fa-exclamation-triangle'></i> Could not retrieve driving distance.  </div>";
-           }
-       })
+                //center map in toronto
+                map.setCenter(myLatlng);
+
+                //show error message
+                output.innerHTML = "<div class='alert-danger'> <i class='fas fa-exclamation-triangle'></i> Could not retrieve driving distance.  </div>";
+            }
+
+        })
+          
+       
     }
 
     //create auto complete objects for all input
@@ -343,27 +416,6 @@
 
 </script>
 
-<!-- <script>
-    let autocomplete;
-    function initAutocomplete() {
-
-        var options = {
-            types: ["establishment", "geocode"],
-            componentRestrictions: { 'country': ['CA'] },
-            fields: ['place_id', 'geometry', 'name']
-        }
-
-        var input1 = document.getElementById('from');
-        var autocomplete1 = new google.maps.places.Autocomplete(input1, options)
-
-        var input2 = document.getElementById('to');
-        var autocomplete2 = new google.maps.places.Autocomplete(input2, options)
-
-
-
-    }
-    
-</script> -->
 
 
 

@@ -38,6 +38,7 @@ router.post("/", async (req, res) => {
     title: req.body.title,
     pricePerHour: req.body.pricePerHour,
     pricePerDay: req.body.pricePerDay,
+    pricePerKm: req.body.pricePerKm,
     airportTransfer: req.body.airportTransfer,
     description: req.body.description,
   });
@@ -120,12 +121,12 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-router.post("/booking", (req, res) => {
-  console.log(req.body);
-  res.render("booking", {
-    title: "confirm",
-  });
-});
+// router.post("/booking", (req, res) => {
+//   console.log(req.body);
+//   res.render("booking", {
+//     title: "confirm",
+//   });
+// });
 
 // function removeLimoCover(fileName) {
 //   fs.unlink(path.join(uploadPath, fileName), (err) => {
