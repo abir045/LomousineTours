@@ -121,4 +121,136 @@ router.get("/prom", async (req, res) => {
   res.render("prom", { limos: limos });
 });
 
+router.get("/childseat", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("childseat", { limos: limos });
+});
+
+router.get("/niagrafalls", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("niagrafalls", { limos: limos });
+});
+
+router.get("/nightout", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("nightout", { limos: limos });
+});
+
+router.get("/casino", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("casino", { limos: limos });
+});
+
+router.get("/funeral", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("funeral", { limos: limos });
+});
+
+router.get("/funeral", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("funeral", { limos: limos });
+});
+
+router.get("/corporateLimo", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("corporateLimo", { limos: limos });
+});
+
+router.get("/toronto-maple-leaf", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("torontoMapleLeaf", { limos: limos });
+});
+
+router.get("/toronto-blue-jays", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("torontoBlueJays", { limos: limos });
+});
+
+router.get("/toronto-fc-limo", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("torontoFCLimo", { limos: limos });
+});
+
+router.get("/toronto-argonauts", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("torontoArgoNauts", { limos: limos });
+});
+
+router.get("/toronto-raptors", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("torontoRaptors", { limos: limos });
+});
+
 module.exports = router;

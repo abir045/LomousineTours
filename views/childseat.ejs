@@ -1,0 +1,148 @@
+<link rel="stylesheet" href="css/airport.css">
+
+
+<div class="card bg-dark text-white">
+    <img src="/images/babyseat.jpg" class="card-img" alt="...">
+    <div class="card-img-overlay">
+        <h3 class="card-title  text-uppercase text-center pt-5 ">Child Safety Seats Installed</h3>
+        <hr>
+        <h3 class=" text-white text-center  ">
+            Infant, Toddler Child Seats, Booster Seats
+        </h3>
+    </div>
+</div>
+
+<div class="container-fluid airport text-center mb-5">
+
+    <button type="button" class="btn btn-outline-light btn-lg">
+        <a class="text-center" href="/booking">Book Now</a>
+    </button>
+</div>
+
+
+<div class="container-fluid ">
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold text-uppercase "> Child Seats</h3>
+    </div>
+
+    <div class="card bg-dark text-white">
+        <img src="/images/child-seat-types.jpg"  class="card-img" alt="...">
+        <div class="card-img-overlay">
+            
+            
+
+        </div>
+    </div>
+
+
+    <figure class='text-center'>
+        <!-- <blockquote class="blockquote">
+            <p>Sedan to and from Toronto Pearson airport, Billy Bishop airport, Hamilton Airport and Buffalo Airport in
+                addition to and from any select location for 4 people </p>
+        </blockquote> -->
+
+        <figcaption class="blockquote-footer pt-5">
+            To be safely protected in a vehicle, children must be properly secured in a child car seat, booster seat or seatbelt,
+            depending on their height, weight and/or age. Research shows that a correctly used child car seat can reduce the
+            likelihood of injury or death by 75 per cent. As a driver, you are responsible for ensuring that all passengers under 16
+            years of age are properly buckled into a seatbelt, child car seat or booster seat. The fine for not using a child car
+            seat or booster seat as required by law is up to $1,000 plus two demerit points on conviction. In Ontario, all drivers
+            are required to use proper child car seats and booster seats when transporting young children. Child car seats must meet
+            Canadian Motor Vehicle Safety Standards. Buckles and straps must be fastened according to the manufacturer's
+            instructions. Newer vehicles that come equipped with a lower universal anchorage system (UAS) for securing a child car
+            seat do not require the use of a seatbelt. A booster seat requires a lap and shoulder belt combination. Infants who
+            weigh less than 9 kilograms (20 lbs.) must be buckled into a rear-facing child car seat attached to the vehicle by a
+            seatbelt or the UAS strap. A rear-facing child car seat is always best installed in the back seat. Never put a
+            rear-facing child car seat in a seating position that has an active airbag. If the airbag inflates, it could seriously
+            injure the child. Toddlers 9 to 18 kilograms (20 to 40 lbs.) must be buckled into a child car seat attached to the
+            vehicle by a seatbelt or a UAS strap; the seat's tether strap must also be attached to the vehicle's tether anchor.
+            Children weighing more than 9 kilograms (20 lbs.) may remain in a rear-facing child car seat if it is designed to
+            accommodate the child's height and weight. Always follow the manufacturer's instructions when installing a child car
+            seat in your vehicle. Booster seats provide 60 per cent more protection than seatbelts alone. These must be used by
+            pre-school and primary-grade-aged children who have outgrown their forward-facing child car seat, are under the age of
+            eight and weigh 18 kilograms (40 lbs.) or more but less than 36 kilograms (80 lbs.), and who are less than 145
+            centimetres (4 feet, 9 inches) tall. Booster seats raise a child so that the adult seatbelt works more effectively. The
+            child's head must be supported by the top of the booster, vehicle seat or headrest. You must use a booster seat with a
+            lap/shoulder belt. The lap/shoulder belt should be worn so that the shoulder belt fits closely against the body, over
+            the shoulder and across the centre of the chest and the lap belt sits firmly against the body and across the hips.
+            Always follow the manufacturer's instructions when installing a booster seat in your vehicle, and secure the booster
+            seat with a seatbelt when a child is not travelling in it, or remove it from the vehicle.
+
+        </figcaption>
+    </figure>
+
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold "> Corporate Limo Service</h3>
+    </div>
+
+    <div class="container-fluid">
+        <p class="lead">We work around the clock 24 hours a day, 7 days a week and 365 days a year to get you to your
+            destination in comfort
+            and
+            in style. We have always been at the forefront of delivering quality hospitality and luxury service to our
+            clients.
+        </p>
+
+        <p class='lead'>
+            Here at Limousine Tours we proudly own and maintain a fleet of professionally chauffeured black luxury
+            vehicles
+            and
+            a management team that provides quality services. Our Vehicles are current year models that come fully
+            equipped with
+            all
+            the modern amenities and facilities that provide comfort and class at the same time. Limo livery offered
+            highly
+            competitive pricing for every experience of wedding. The drivers are flexible and professional the day-of.
+            Limousine
+            livery offered highly competitive pricing for wedding transportation. Apart from all these qualities go out
+            in style
+            for
+            your bachelor party with a classy limousine or a fantastic party bus and It does not matter if you are 5
+            years old
+            or
+            100 years young, our Limousine can accommodate any size birthday party. Limousines will make your home
+            coming or
+            prom
+            party the most enjoyable experience that you could wish for. Not only will you arrive and depart the event
+            in
+            unbelievable style. Limousine Tours offers airport service from all over the world and gives you a luxurious
+            service
+            from one part of world to other.
+        </p>
+    </div>
+
+
+
+</div>
+
+<div class="container-fluid row  ">
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold">Our Fleet</h3>
+    </div>
+
+
+
+    <% limos.forEach(limo=> { %>
+
+        <div class="card col-md w-100">
+            <a href="/limos/<%= limo.id %>">
+
+                <img src="<%= limo.coverImagePath %>" class="card-img" alt="...">
+            </a>
+
+            <div class="card-img-overlay">
+                <h5 class="card-title text-center">
+                    <%= limo.title %>
+                </h5>
+                <!-- <p class="card-text ">
+                 <h6 class="text-center">Price Per Hour: <%= limo.pricePerHour %>$</h6>
+                    <h6 class="text-center">Price Per Day: <%= limo.pricePerDay %>$</h6>
+                    <h6 class="text-center">Airport Transfer: <%= limo.airportTransfer %>$</h6>
+                    </p> -->
+
+            </div>
+        </div>
+
+        <% }) %>
+
+</div>

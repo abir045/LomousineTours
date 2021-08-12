@@ -1,0 +1,118 @@
+<link rel="stylesheet" href="css/airport.css">
+
+
+<div class="card bg-dark text-white">
+    <img src="/images/bluejays.jpg" class="card-img" alt="...">
+    <div class="card-img-overlay">
+        <h3 class="card-title  text-uppercase text-center pt-5 ">Toronto Blue Jays Executive Limousine</h3>
+        <hr>
+        <h3 class="text-center  ">
+            Game Pickup and Drop off
+        </h3>
+    </div>
+</div>
+
+<div class="container-fluid airport text-center mb-5">
+
+    <button type="button" class="btn btn-outline-light btn-lg">
+        <a class="text-center" href="/booking">Book Now</a>
+    </button>
+</div>
+
+
+<div class="container-fluid ">
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold "> Executive Blue Jays Game Limousine</h3>
+    </div>
+
+    <figure class='text-center'>
+        <!-- <blockquote class="blockquote">
+            <p>Sedan to and from Toronto Pearson airport, Billy Bishop airport, Hamilton Airport and Buffalo Airport in
+                addition to and from any select location for 4 people </p>
+        </blockquote> -->
+
+        <figcaption class="blockquote-footer pt-3">
+            Limousine Tour's focus is always on it's clients who expect & demand premium service. Our dedication to our
+            valued
+            customers channel through our company, accompanied with a unique blend of quality, innovation, commitment
+            and passion,
+            we are here to make your journey the most comfortable ride that you desire.
+
+        </figcaption>
+    </figure>
+
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold "> Corporate Limo Service</h3>
+    </div>
+
+    <div class="container-fluid">
+        <p class="lead">We work around the clock 24 hours a day, 7 days a week and 365 days a year to get you to your
+            destination in comfort
+            and
+            in style. We have always been at the forefront of delivering quality hospitality and luxury service to our
+            clients.
+        </p>
+
+        <p class='lead'>
+            Here at Limousine Tours we proudly own and maintain a fleet of professionally chauffeured black luxury
+            vehicles
+            and
+            a management team that provides quality services. Our Vehicles are current year models that come fully
+            equipped with
+            all
+            the modern amenities and facilities that provide comfort and class at the same time. Limo livery offered
+            highly
+            competitive pricing for every experience of wedding. The drivers are flexible and professional the day-of.
+            Limousine
+            livery offered highly competitive pricing for wedding transportation. Apart from all these qualities go out
+            in style
+            for
+            your bachelor party with a classy limousine or a fantastic party bus and It does not matter if you are 5
+            years old
+            or
+            100 years young, our Limousine can accommodate any size birthday party. Limousines will make your home
+            coming or
+            prom
+            party the most enjoyable experience that you could wish for. Not only will you arrive and depart the event
+            in
+            unbelievable style. Limousine Tours offers airport service from all over the world and gives you a luxurious
+            service
+            from one part of world to other.
+        </p>
+    </div>
+
+
+
+</div>
+
+<div class="container-fluid row  ">
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold">Our Fleet</h3>
+    </div>
+
+
+
+    <% limos.forEach(limo=> { %>
+
+        <div class="card col-md w-100">
+            <a href="/limos/<%= limo.id %>">
+
+                <img src="<%= limo.coverImagePath %>" class="card-img" alt="...">
+            </a>
+
+            <div class="card-img-overlay">
+                <h5 class="card-title text-center">
+                    <%= limo.title %>
+                </h5>
+                <!-- <p class="card-text ">
+                 <h6 class="text-center">Price Per Hour: <%= limo.pricePerHour %>$</h6>
+                    <h6 class="text-center">Price Per Day: <%= limo.pricePerDay %>$</h6>
+                    <h6 class="text-center">Airport Transfer: <%= limo.airportTransfer %>$</h6>
+                    </p> -->
+
+            </div>
+        </div>
+
+        <% }) %>
+
+</div>
