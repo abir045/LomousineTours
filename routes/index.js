@@ -253,4 +253,26 @@ router.get("/toronto-raptors", async (req, res) => {
   res.render("torontoRaptors", { limos: limos });
 });
 
+router.get("/toronto-pearson", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("torontoPearson", { limos: limos });
+});
+
+router.get("/buttonville-municipal-airport", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("buttonville", { limos: limos });
+});
+
 module.exports = router;
