@@ -81,14 +81,14 @@
 
                         
                 
-                        <ul class="" aria-labelledby="dropdownMenuLink">
+                        <ul class="dropdown" aria-labelledby="dropdownMenuLink">
                         <select id='social' name='limo' style='width: 300px;'>
                            
-                       
-                            <option id='SEDAN' value='sedan'></option>
-                            <option id='SUV' value="suv"></option>
-                            <option id='Slimo' value="strechLimo"></option>
-                            <option id='partyBus' value="partyBus"> </option>
+               
+                            <option  value='sedan' id='SEDAN'>selected</option>
+                            <option  value='suv' id='SUV'></option>
+                            <option  value='strechLimo' id='Slimo'></option>
+                            <option  value='partyBus' id='partyBus'> </option>
                             
                         </select> 
                         </ul>
@@ -272,19 +272,21 @@
 <!-- select script -->
 <script>
 
+        function formatOptions(state) {
+                if (!state.id) { return state.text; }
+                var $state = $(
+                    '<span ><img sytle="display:block;" src="images/vehicles/' + state.element.value.toLowerCase() + '.jpg" /> ' + state.text + '</span>'
+                );
+                return $state;
+            }
+
     $(document).ready(function () {
         $("#social").select2({
             templateResult: formatOptions
         });
     });
 
-    function formatOptions(state) {
-        if (!state.id) { return state.text; }
-        var $state = $(
-            '<span ><img sytle="display:block;" src="images/vehicles/' + state.element.value.toLowerCase() + '.jpg" /> ' + state.text + '</span>'
-        );
-        return $state;
-    }
+
 
 </script>
 

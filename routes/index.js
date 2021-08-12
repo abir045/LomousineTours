@@ -35,13 +35,6 @@ router.get("/booking", async (req, res) => {
 });
 
 router.post("/booking", async (req, res) => {
-  let limos;
-  try {
-    limos = await Limo.find();
-  } catch {
-    limos = [];
-  }
-
   const msg = {
     to: "limotaxitours@gmail.com",
     from: "limotaxitours@gmail.com",
@@ -82,6 +75,50 @@ router.post("/booking", async (req, res) => {
     req.flash("error", "Sorry, something went wrong");
     res.redirect("back");
   }
+});
+
+router.get("/airport", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("airport", { limos: limos });
+});
+
+router.get("/wedding", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("wedding", { limos: limos });
+});
+
+router.get("/chauffer", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("chauffer", { limos: limos });
+});
+
+router.get("/prom", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("prom", { limos: limos });
 });
 
 module.exports = router;
