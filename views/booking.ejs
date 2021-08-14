@@ -414,13 +414,13 @@
 
                 
 
-                sedan.innerHTML = "Type Sedan: " + ((distance / 1000) * 1.75).toFixed() + "$" ;
+                sedan.innerHTML = "Type Sedan: " + ((distance / 1000) * 1.75).toFixed()>55?((distance / 1000) * 1.75).toFixed(): "Type Sedan: "+ 55 + "$" ;
                
-                suv.innerHTML = "Type SUV : " + ((distance / 1000) * 1.95).toFixed() + "$";
+                suv.innerHTML = "Type SUV : " + ((distance / 1000) * 1.95).toFixed()>75? ((distance / 1000) * 1.95).toFixed(): "Type SUV: " + 75 + "$";
 
-                SLimo.innerHTML = "Type Streched Limo : " + ((distance / 1000) *2.25).toFixed() + "$";
+                SLimo.innerHTML = "Type Streched Limo : " + ((distance / 1000) *2.25).toFixed()>95? ((distance / 1000) * 2.25).toFixed(): "Type Streched Limo: " + 95  + "$";
 
-                partyBus.innerHTML = "Type Party Bus : " + ((distance / 1000) * 2.5).toFixed()  + "$";
+                partyBus.innerHTML = "Type Party Bus : " + ((distance / 1000) * 2.5).toFixed()>115? ((distance / 1000) * 2.5).toFixed(): "Type Streched Limo: " + 115 + "$";
 
 
                 //display route
