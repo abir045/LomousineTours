@@ -96,7 +96,7 @@
                         <select  name='limo' style='width: 300px;'>
                             <option id="SEDAN">Sedan</option>
                             <option id='SUV' >SUV</option>
-                            <option  id ='Slimo' >Long Limo</option>
+                            <option id ='Slimo' >Long Limo</option>
                             <option id='partyBus' >Party Bus </option>
                         
                         </select>
@@ -388,22 +388,25 @@
                 prices.innerHTML = 
                 "<div class='alert-success'>" + 
                 "Price for Sedan: " + ((distance / 1000) * 1.75).toFixed() + "$" + 
-                " .<br/> Price SUV : " + ((distance / 1000) * 1.95).toFixed()  + "$" 
-                 + " .<br/> Price Long Limo : " + 
-                ((distance / 1000) * 2.25).toFixed()  + "$"+  
-                " .<br/> Price Party Bus : " + ((distance / 1000) * 2.5).toFixed() 
-                 + "$" +
+                ".<br/> Minimum Fair: 55$" +
+                " .<br/> Price SUV : " + ((distance / 1000) * 1.95).toFixed()  + "$" +
+                ".<br/> Minimum Fair: 75$" +
+                
+                  " .<br/> Price Long Limo : " +  ((distance / 1000) * 2.25).toFixed()  + "$"+  
+                  ".<br/> Minimum Fair: 75$" +
+                " .<br/> Price Party Bus : " + ((distance / 1000) * 2.5).toFixed() + "$" +
+                  ".<br/> Minimum Fair: 95$" +
                  ".<div/>"
 
                 
 
-                sedan.innerHTML = "Price Sedan: " + (distance / 1000) * 1.75 + "$";
+                sedan.innerHTML = "Type Sedan: " + ((distance / 1000) * 1.75).toFixed() + "$" ;
                
-                suv.innerHTML = "Price SUV : " + (distance / 1000) * 1.95 + "$";
+                suv.innerHTML = "Type SUV : " + ((distance / 1000) * 1.95).toFixed() + "$";
 
-                SLimo.innerHTML = "Price Long Limo : " + (distance / 1000) *2.25 + "$";
+                SLimo.innerHTML = "Type Long Limo : " + ((distance / 1000) *2.25).toFixed() + "$";
 
-                partyBus.innerHTML = "Price Party Bus : " + (distance / 1000) * 2.5  + "$";
+                partyBus.innerHTML = "Type Party Bus : " + ((distance / 1000) * 2.5).toFixed()  + "$";
 
 
                 //display route
