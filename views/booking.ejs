@@ -185,12 +185,28 @@
 
                 <div class="col-md-2">
                     <div class="form-floating">
-                        <select class="form-select" id="childSeat" name='childSeat' aria-label="Floating label select example">
-                            <option selected>yes</option>
-                            <option value="no">no</option>
+                        <select class="form-select" id="childSeat" name='childSeat' aria-label="Floating label select example" >
+                            <optgroup label='yes'>
+                            <optgroup label='Infant'>
+                                <option value='Infant: 1'>1</option>
+                                <option value='Infant: 2'>2</option>
+                                <option value='Infant: 3'>3</option>
+                                </optgroup>
+                                <optgroup label='Toddler'>
+                            <option value='Toddler: 1'>1</option>
+                            <option value='Toddler: 2'>2</option>
+                            <option value='Toddler: 3'>3</option>
+                                </optgroup>
+                                <optgroup label='Booster'>
+                                    <option value='Booster: 1'>1</option>
+                                    <option value='Booster: 2'>2</option>
+                                    <option value='Booster: 3'>3</option>
+                                </optgroup>
                             
-                         
-                
+                            
+
+                            </optgroup>
+                            <option value="no">no</option>
                         </select>
                         <label class="fw-bold fs-5" for="floatingSelectGrid">Child Seat</label>
                     </div>
