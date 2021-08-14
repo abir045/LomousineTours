@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" />
 
 
+
 <div class="container-fluid mt-5">
         
         <div class="col-md-2">
@@ -44,6 +45,9 @@
                         <div id='output'>
                 
                         </div>
+                        <div id='prices'>
+
+                        </div>
                     </div>
                 </div>
 
@@ -78,22 +82,31 @@
                             data-bs-toggle="dropdown" aria-expanded="true">
                             Select Limo Type
                         </button>
-
-                        
+                      
                 
                         <ul class="dropdown" aria-labelledby="dropdownMenuLink">
-                        <select id='social' name='limo' style='width: 300px;'>
-                           
-               
-                            <option  value='sedan' id='SEDAN'>selected</option>
-                            <option  value='suv' id='SUV'></option>
-                            <option  value='strechLimo' id='Slimo'></option>
-                            <option  value='partyBus' id='partyBus'> </option>
+                        <!-- <select id='social' name='limo' style='width: 300px;'>
+                             <option  value='sedan' >Sedan</option>
+                            <option  value='suv' >SUV</option>
+                            <option  value='strechLimo' >Long Limo</option>
+                            <option  value='partyBus' >Party Bus </option>
                             
-                        </select> 
+                        </select>  -->
+
+                        <select  name='limo' style='width: 300px;'>
+                            <option id="SEDAN">Sedan</option>
+                            <option id='SUV' >SUV</option>
+                            <option  id ='Slimo' >Long Limo</option>
+                            <option id='partyBus' >Party Bus </option>
+                        
+                        </select>
                         </ul>
                 
-                    </div>   
+                    </div>
+                    <!-- <div class="com-md-2">
+                        <label id='SEDAN'>SEDAN</label>
+                        <input type="image" name='sedan' alt="Login" src="/images/vehicles/sedan.jpg">
+                    </div> -->
                 </div>
 
             </div>
@@ -269,6 +282,8 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 
+
+
 <!-- select script -->
 <script>
 
@@ -363,21 +378,32 @@
                 const suv = document.getElementById('SUV');
                 const SLimo = document.getElementById('Slimo');
                 const partyBus = document.getElementById('partyBus');
-
+                const prices = document.querySelector('#prices');
 
                 //const priceforDistance = document.getElementById('pricePerKm').innerHTML;
+                //const sedanprice = ((distance / 1000) * 1.75).toFixed()
 
 
 
-               // price.innerHTML = "Price SEDAN: " + (distance / 1000) * 2 + "$";
+                prices.innerHTML = 
+                "<div class='alert-success'>" + 
+                "Price for Sedan: " + ((distance / 1000) * 1.75).toFixed() + "$" + 
+                " .<br/> Price SUV : " + ((distance / 1000) * 1.95).toFixed()  + "$" 
+                 + " .<br/> Price Long Limo : " + 
+                ((distance / 1000) * 2.25).toFixed()  + "$"+  
+                " .<br/> Price Party Bus : " + ((distance / 1000) * 2.5).toFixed() 
+                 + "$" +
+                 ".<div/>"
+
                 
-                sedan.innerHTML = "Price Sedan: " + (distance / 1000) * 2 + "$";
+
+                sedan.innerHTML = "Price Sedan: " + (distance / 1000) * 1.75 + "$";
                
-                suv.innerHTML = "Price SUV : " + (distance / 1000) * 3 + "$";
+                suv.innerHTML = "Price SUV : " + (distance / 1000) * 1.95 + "$";
 
-                SLimo.innerHTML = "Price Long Limo : " + (distance / 1000) * 4 + "$";
+                SLimo.innerHTML = "Price Long Limo : " + (distance / 1000) *2.25 + "$";
 
-                partyBus.innerHTML = "Price Party Bus : " + (distance / 1000) * 5  + "$";
+                partyBus.innerHTML = "Price Party Bus : " + (distance / 1000) * 2.5  + "$";
 
 
                 //display route

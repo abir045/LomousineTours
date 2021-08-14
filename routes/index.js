@@ -42,9 +42,8 @@ router.post("/booking", async (req, res) => {
     text: `
             PickUp: ${req.body.from}
             Destination: ${req.body.to}
-            distance: ${req.body.output}
             Luggages: ${req.body.bags}
-            limoType:${req.body.limo}
+            limoPrice:${req.body.limo}
             Number of passengers: ${req.body.people}
             Full Name: ${req.body.name}
             Phone No: ${req.body.phone}
