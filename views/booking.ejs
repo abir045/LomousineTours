@@ -11,6 +11,7 @@
                 <i class='fas fa-directions'></i>
             </button>
         </div>
+       
 
         <form class="form-floating" action="/booking" method='POST' id='form-data'>
 
@@ -54,7 +55,8 @@
 
             </div>
 
-            <div class="row g-0 mb-5">
+        
+                
                 <div class="col-md-2">
                     <label for='date'>Pickup Date and Time</label>
                 
@@ -110,10 +112,11 @@
                 </div>
 
             </div>
-
-            <!-- <% limos.forEach(limo=> { %>
+             
+            <div class="row g-0">
+            <% limos.forEach(limo=> { %>
                 
-                <div class="row g-0">
+                
                     <div class="col-md-2">
                         <div class="card" >
                             <a href="/limos/<%= limo.id %>">
@@ -129,22 +132,17 @@
                                 </h5>
                                 <p class="card-text ">
             
-                                <h6 class="text-center" id='pricePerHour'>Price Per Hour: <%= limo.pricePerHour %>$</h6>
-                                <h6 class="text-center">Price Per Day: <%= limo.pricePerDay %>$</h6>
-                                <h6 class="text-center">Airport Transfer: <%= limo.airportTransfer %>$</h6>
-                                <h6 class="text-center" id='pricePerKm'> <%= limo.pricePerKm %></h6>
-                                <h6 class="text-center" id='price'> </h6>
-                                 
                                 </p>
-                                <button type='submit' class='btn btn-info'>Book</button>
+                                
             
                             </div>
                         </div>
                     </div>
+                
+            
+            
+                <% }) %>
                 </div>
-            
-            
-                <% }) %> -->
 
             <div class="row g-1 mb-5">
                 <div class="col-md-4">
@@ -403,15 +401,15 @@
 
                 prices.innerHTML = 
                 "<div class='alert-success'>" + 
-                "Price for Sedan: " + ((distance / 1000) * 1.75).toFixed() + "$" + 
-                ".<br/> Minimum Fair: 55$" +
-                " .<br/> Price SUV : " + ((distance / 1000) * 1.95).toFixed()  + "$" +
-                ".<br/> Minimum Fair: 75$" +
+                // "Price for Sedan: " + ((distance / 1000) * 1.75).toFixed() + "$" + 
+                ".<br/> Minimum Fair for SEDAN: 55$" +
+                // " .<br/> Price SUV : " + ((distance / 1000) * 1.95).toFixed()  + "$" +
+                ".<br/> Minimum Fair for SUV: 75$" +
                 
-                  " .<br/> Price Long Limo : " +  ((distance / 1000) * 2.25).toFixed()  + "$"+  
-                  ".<br/> Minimum Fair: 75$" +
-                " .<br/> Price Party Bus : " + ((distance / 1000) * 2.5).toFixed() + "$" +
-                  ".<br/> Minimum Fair: 95$" +
+                //   " .<br/> Price Long Limo : " +  ((distance / 1000) * 2.25).toFixed()  + "$"+  
+                  ".<br/> Minimum Fair for Streched Limo: 95$" +
+                // " .<br/> Price Party Bus : " + ((distance / 1000) * 2.5).toFixed() + "$" +
+                  ".<br/> Minimum Fair for Party Bus: 115$" +
                  ".<div/>"
 
                 
@@ -420,7 +418,7 @@
                
                 suv.innerHTML = "Type SUV : " + ((distance / 1000) * 1.95).toFixed() + "$";
 
-                SLimo.innerHTML = "Type Long Limo : " + ((distance / 1000) *2.25).toFixed() + "$";
+                SLimo.innerHTML = "Type Streched Limo : " + ((distance / 1000) *2.25).toFixed() + "$";
 
                 partyBus.innerHTML = "Type Party Bus : " + ((distance / 1000) * 2.5).toFixed()  + "$";
 
