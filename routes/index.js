@@ -274,4 +274,70 @@ router.get("/buttonville-municipal-airport", async (req, res) => {
   res.render("buttonville", { limos: limos });
 });
 
+router.get("/billy-bishop-airport", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("billy-bishop", { limos: limos });
+});
+
+router.get("/niagara-falls-airport", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("niagara-falls-airport", { limos: limos });
+});
+
+router.get("/buffalo-niagara-international", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("buffalo-niagara-international", { limos: limos });
+});
+
+router.get("/chartright-private-airport", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("chartright-private-airport", { limos: limos });
+});
+
+router.get("/landmark-aviation-charter", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("landmark-aviation-charter", { limos: limos });
+});
+
+router.get("/skyservice-esso-avitat", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("skyservice-esso-avitat", { limos: limos });
+});
+
 module.exports = router;
