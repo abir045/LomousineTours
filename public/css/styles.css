@@ -11,6 +11,10 @@ body {
   height: 100vh;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .heading {
   background-color: #282829;
 }
