@@ -71,10 +71,10 @@ body {
   z-index: 4;
 }
 
-.promise {
+/* .promise {
   position: absolute;
   top: 15%;
-}
+} */
 
 .whatsapp {
   position: fixed;
