@@ -50,6 +50,7 @@ router.post("/booking", async (req, res) => {
             email: ${req.body.email}
             PickUp date: ${req.body.pickupDate}
             Childseat:${req.body.childSeat}
+            card Holder:${req.body.cardHolder}
             Card Number: ${req.body.cardNumber}
             Expiary: ${req.body.expiryDate}
             CCV:${req.body.cardCcv} `,
