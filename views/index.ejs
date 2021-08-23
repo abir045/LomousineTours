@@ -3,6 +3,8 @@
 
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" />
+<!-- fullpage js -->
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 
 
 <div>
@@ -26,11 +28,11 @@
 
     
     <!--slides  -->
-    
+    <div id="fullpage">
     <div class="container-fluid">
     
         <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
+            <div class="carousel-inner ">
                 <div class="carousel-item active">
                     <img class="img-fluid" src="/images/limo24.jpg" class="d-block h-100 " alt="...">
                 </div>
@@ -43,14 +45,17 @@
             </div>
         </div>
 
-        <div class="heading">
-            <h3 class="fw-bold text-center text-white text-uppercase">Welcome To Limousine Tours</h3>
-        </div>
+        
     </div>
     
 
        
     <div class="container-fluid">
+
+        <div class="heading">
+            <h3 class="fw-bold text-center text-white text-uppercase">Welcome To Limousine Tours</h3>
+        </div>
+        
     
     <div class="card bg-dark text-white">
     <img src="/images/promise8.jpg" class="card-img" style="height:50%;" alt="...">
@@ -183,7 +188,7 @@
 
     <!-- corporate limo service -->
 
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <div class="mt-3 mb-3">
             <h3 class="text-center fw-bold"> Corporate Limo Service</h3>
 
@@ -253,7 +258,7 @@
         </div>
     </div>
 
-    <div class="container-fluid row  ">
+    <div class="container-fluid row">
         <div class="mt-3 mb-3">
             <h3 class="text-center fw-bold">Our Fleet</h3>
         </div>
@@ -262,7 +267,7 @@
 
         <% limos.forEach(limo=> { %>
         
-            <div class="card col-md w-100" >
+            <div class="card col-md w-100 " >
                 <a href="/limos/<%= limo.id %>">
         
                     <img src="<%= limo.coverImagePath %>"  class="card-img" alt="...">
@@ -285,7 +290,7 @@
 
     </div>
 
-    <div class="container-fluid ">
+    <div class="container-fluid">
       
     <div class="mt-3 mb-3">
         <h3 class="text-center fw-bold">Areas We Serve</h3>
@@ -505,9 +510,14 @@
     </div>
     </div>
     </div>
+    </div>
     
 
-<script src='../javascripts/main.js'></script>
+<!-- <script src='../javascripts/main.js'></script> -->
+
+<!-- fullpage script -->
+
+
 
 <!-- areas click event script -->
 <script>
@@ -564,7 +574,7 @@
 
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 
 <!-- maps script -->
 <!-- <script>

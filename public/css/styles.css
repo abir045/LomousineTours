@@ -181,7 +181,7 @@ ul {
   border: none;
   border-bottom: dashed 0.2rem rgba(255, 255, 255, 0.15);
   font-size: 1.2rem;
-  color: #fff;
+  color: #000;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 .card__input--large {
@@ -189,18 +189,18 @@ ul {
 }
 
 .card__input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   text-shadow: none;
 }
 
 .card__input:focus {
   outline: none;
-  border-color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.6);
 }
 
 .card__label {
   display: flex;
-  color: #fff;
+  color: #000;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   font-weight: 400;
 }
@@ -223,6 +223,9 @@ ul {
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
+div#fp-nav a span {
+  background: #fff !important;
+}
 @keyframes cardEnter {
   from {
     transform: translateY(50vh);

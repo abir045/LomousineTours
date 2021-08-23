@@ -7,8 +7,9 @@
 <div class="container-fluid mt-5">
         
         <div class="col-md-2">
-            <button class='btn btn-info btn-lg' onclick="calcRoute();">
-                <i class='fas fa-directions'></i>
+            <button class='btn btn-info btn-lg'>
+            <!-- onclick="calcRoute();"> -->
+                <i class='fas fa-directions'>Find Direction</i>
             </button>
         </div>
        
@@ -26,7 +27,7 @@
 
                 <div class="col-md-3">
                     <div class="form-floating">
-                        <input type="text" id='to' placeholder="Destination" class="form-control" name='to' value="">
+                        <input type="text" id='to' placeholder="Destination" class="form-control" name='to' value="" onchange='calcRoute();'>
                         <label class="fw-bold fs-5" for="floatingInputGrid">Drop off Destination</label>
 
                     </div>
@@ -150,7 +151,7 @@
                     <label for='payment'>Card Info</label>
                    
                     <div class="card credit  ">
-                        <img src="/images/card.jpg" class="img-fluid" alt="...">
+                        <img src="/images/visa-master-icon-28.jpg" class="img-fluid" alt="..." style="height:300px;">
 
                         <div class="card-img-overlay">
                             <!-- <h3 class="card__title">Enter Payment Information</h3> -->
@@ -330,6 +331,7 @@
     //set map options
     
 
+
     var myLatlng = { lat: 43.651070, lng: -79.347015 };
     var mapOptions = {
         center: myLatlng,
@@ -456,7 +458,13 @@
     var input2 = document.getElementById('to');
     var autocomplete2 = new google.maps.places.Autocomplete(input2, options);
 
-
+//    const originElement = document.getElementById('from').value;  
+  // const destElement = document.querySelector('to');
+     
+    //   selectElement.addEventListener('onkeyup', calcRoute);
+    //   input2.addEventListener('change', calcRoute);
+     
+   
 
 
 </script>
