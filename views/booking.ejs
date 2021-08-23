@@ -6,12 +6,11 @@
 
 <div class="container-fluid mt-5">
         
-        <div class="col-md-2">
-            <button class='btn btn-info btn-lg' onclick="calcRoute();">
-            <!-- onclick="calcRoute();"> -->
-                <i class='fas fa-directions'>Find Direction</i>
+        <!-- <div class="col-md-2">
+            <button class='btn btn-info btn-lg'   onclick="calcRoute();">
+           <i class='fas fa-directions'>Find Direction</i>
             </button>
-        </div>
+        </div> -->
        
 
         <form class="form-floating" action="/booking" method='POST' id='form-data'>
@@ -27,7 +26,7 @@
 
                 <div class="col-md-3">
                     <div class="form-floating">
-                        <input type="text" id='to' placeholder="Destination" class="form-control" name='to' value="" onchange='calcRoute();'>
+                        <input type="text" id='to' placeholder="Destination" class="form-control" name='to' value="" onkeyup='calcRoute();'>
                         <label class="fw-bold fs-5" for="floatingInputGrid">Drop off Destination</label>
 
                     </div>
@@ -404,19 +403,7 @@
 
 
 
-                // prices.innerHTML = 
-                // "<div class='alert-success'>" + 
-                // // "Price for Sedan: " + ((distance / 1000) * 1.75).toFixed() + "$" + 
-                // ".<br/> Minimum Fair for SEDAN: 55$" +
-                // // " .<br/> Price SUV : " + ((distance / 1000) * 1.95).toFixed()  + "$" +
-                // ".<br/> Minimum Fair for SUV: 75$" +
                 
-                // //   " .<br/> Price Long Limo : " +  ((distance / 1000) * 2.25).toFixed()  + "$"+  
-                //   ".<br/> Minimum Fair for Streched Limo: 95$" +
-                // // " .<br/> Price Party Bus : " + ((distance / 1000) * 2.5).toFixed() + "$" +
-                //   ".<br/> Minimum Fair for Party Bus: 115$" +
-                //  ".<div/>"
-
                 
 
                 sedan.innerHTML = "Type Sedan: " +  ((distance / 1000) * 1.75).toFixed()+ "$" ;
@@ -461,12 +448,7 @@
     var input2 = document.getElementById('to');
     var autocomplete2 = new google.maps.places.Autocomplete(input2, options);
 
-//    const originElement = document.getElementById('from').value;  
-  // const destElement = document.querySelector('to');
-     
-    //   selectElement.addEventListener('onkeyup', calcRoute);
-    //   input2.addEventListener('change', calcRoute);
-     
+
    
 
 
