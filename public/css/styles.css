@@ -215,7 +215,7 @@ ul {
 
 .card__brand {
   font-size: 2rem;
-  color: #fff;
+  color: #000;
   width: 100px;
   display: flex;
   /* max-height: 75px; */
