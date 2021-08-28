@@ -1,0 +1,151 @@
+<link rel="stylesheet" href="css/airport.css">
+
+
+<div class="card bg-dark ">
+    <img src="/images/bracebridge.jpg" class="card-img" alt="...">
+    <div class="card-img-overlay">
+        <h3 class="card-title  text-uppercase text-center pt-5 ">Bracebridge Airport Limousine
+        </h3>
+        <hr>
+        <h3 class="text-center  text-white">
+            To & From Pearson Airport
+        </h3>
+    </div>
+</div>
+
+<div class="container-fluid airport text-center mb-5">
+
+    <button type="button" class="btn btn-outline-light btn-lg">
+        <a class="text-center" href="/booking">Book Now</a>
+    </button>
+</div>
+
+
+<div class="container-fluid ">
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold ">We offer Airport Limo Services in Bracebridge</h3>
+    </div>
+
+    <figure class='text-center'>
+        <blockquote class="blockquote">
+
+            <!-- <a href='https://www.buttonvilleairport.ca/'>Info </a> -->
+
+        </blockquote>
+
+        <figcaption class="blockquote-footer pt-3">
+            With our limo services your travel to Airport will be hassle free. When you come to a new city you not only
+            look for the
+            good services from limo services providers but also important information which will be useful for you in
+            the new city.
+            So our trained chauffer's will share the important information you need may further. One thing for sure with
+            our limo
+            services your tour will be fun, full comfortable and hassle free.
+
+        </figcaption>
+    </figure>
+
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold "> About Bracebridge</h3>
+    </div>
+
+    <div class="container-fluid">
+        <p class="lead">
+
+            Bracebridge is a town and the seat of the Muskoka District Municipality of Ontario, Canada. The town was built around a
+            waterfall on the Muskoka River in the centre of town, and is known for its other nearby waterfalls (Wilson's Falls, High
+            Falls, etc.). It was first incorporated in 1875. It was named after a book, Bracebridge Hall by Washington Irving, that
+            the postmaster in charge of naming towns was reading at the time. The same novel also provided the name for nearby
+            Gravenhurst. The town is the seat of the district government, a centre of tourism for the Muskoka area, and home to
+            several historical sites, such as the Inn at the Falls, Woodchester Villa, and the Silver Bridge, which joins Manitoba
+            Street with Ecclestone Drive. The Silver Bridge was repaired in 2002. Bracebridge is also the home of the Muskoka
+            Cottage Brewery.
+            
+            Bracebridge has always been a very active community that has taken advantage of the local natural area for building
+            hundreds of kilometers of trails, development of water sports such as canoeing, kayaking and rowing. Bracebridge's
+            residents were proud partners in the construction of the TransCanada Trail system that runs through the
+            community.Bracebridge's main street, Manitoba Street and surrounding areas have been enhanced to reflect the small town
+            northern Ontario character that is inherent to the Downtown Business District.
+
+            Still a vibrant agricultural area, New Tecumseth is a beautifully picturesque farm landscape conveniently
+            located near
+            major cities, and offers a wonderful quality of life to its 28,800 residents. The Town is rich with
+            volunteers in a wide
+            variety of areas including sports, arts and culture and charitable endeavours. It is a community on the go
+            and on the
+            verge of considerable growth with the population set to double over the next eight years.
+        </p>
+        <h3 class="text-center fw-bold ">Places to visit</h3>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+
+                <strong>Crestwood Inn & Restaurant</strong>
+                <address> 177 Medora St
+                Port Carling, ON P0B 1J0
+                </address>
+            </li>
+            <li class="list-inline-item">
+                <strong>Hart of Muskoka</strong>
+                <address>1703 Winhara Rd
+                Gravenhurst, ON P1P 1R1
+                </address>
+            </li>
+            <li class="list-inline-item">
+
+                <strong>Skyways Motel</strong>
+                <address>
+                RR#1
+                Gravenhurst, ON P1P 1R1
+                </address>
+
+            </li>
+            <li class="list-inline-item">
+
+                <strong>Travelodge Bracebridge</strong>
+                <address>
+                    320 Taylor Rd
+                    Bracebridge, ON P1L 1K1
+                </address>
+
+            </li>
+
+
+        </ul>
+
+    </div>
+
+
+
+</div>
+
+<div class="container-fluid row  ">
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold">Our Fleet</h3>
+    </div>
+
+
+
+    <% limos.forEach(limo=> { %>
+
+        <div class="card col-md w-100">
+            <a href="/limos/<%= limo.id %>">
+
+                <img src="<%= limo.coverImagePath %>" class="card-img" alt="...">
+            </a>
+
+            <div class="card-img-overlay">
+                <h5 class="card-title text-center">
+                    <%= limo.title %>
+                </h5>
+                <!-- <p class="card-text ">
+                 <h6 class="text-center">Price Per Hour: <%= limo.pricePerHour %>$</h6>
+                    <h6 class="text-center">Price Per Day: <%= limo.pricePerDay %>$</h6>
+                    <h6 class="text-center">Airport Transfer: <%= limo.airportTransfer %>$</h6>
+                    </p> -->
+
+            </div>
+        </div>
+
+        <% }) %>
+
+</div>

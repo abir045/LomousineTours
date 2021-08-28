@@ -341,4 +341,267 @@ router.get("/skyservice-esso-avitat", async (req, res) => {
   res.render("skyservice-esso-avitat", { limos: limos });
 });
 
+router.get("/ajax", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("ajax-City", { limos: limos });
+});
+
+router.get("/aldershot", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("aldershot-City", { limos: limos });
+});
+
+router.get("/alliston", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("alliston-City", { limos: limos });
+});
+
+router.get("/alton", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("alton-City", { limos: limos });
+});
+
+router.get("/bracebridge", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("bracebridge-City", { limos: limos });
+});
+
+router.get("/brampton", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("brampton-City", { limos: limos });
+});
+
+router.get("/brockville", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("brockville-City", { limos: limos });
+});
+
+router.get("/brooklin", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("brooklin-City", { limos: limos });
+});
+
+router.get("/brougham", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("brougham-City", { limos: limos });
+});
+
+router.get("/collingwood", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("collingwood-City", { limos: limos });
+});
+
+router.get("/concord", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("concord-City", { limos: limos });
+});
+
+router.get("/cookstown", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("cookstown-City", { limos: limos });
+});
+
+router.get("/courtice", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("courtice-City", { limos: limos });
+});
+
+router.get("/erin", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("erin-City", { limos: limos });
+});
+
+router.get("/etobicoke", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("etobicoke-City", { limos: limos });
+});
+
+router.get("/fenelon", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("fenelon-City", { limos: limos });
+});
+
+router.get("/grand-valley", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("grand-valley-City", { limos: limos });
+});
+
+router.get("/inglewood", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("inglewood-City", { limos: limos });
+});
+
+router.get("/king-city", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("king-City", { limos: limos });
+});
+router.get("/kingston", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("kingston-City", { limos: limos });
+});
+
+router.get("/kitchener", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("kitchener-City", { limos: limos });
+});
+
+router.get("/lindsay", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("lindsay-City", { limos: limos });
+});
+
+router.get("/niagarafalls", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("niagara-City", { limos: limos });
+});
+
+router.get("/northbay", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("northbay-City", { limos: limos });
+});
+
 module.exports = router;

@@ -1,0 +1,143 @@
+<link rel="stylesheet" href="css/airport.css">
+
+
+<div class="card bg-dark ">
+    <img src="/images/erin.jpg" class="card-img" alt="...">
+    <div class="card-img-overlay">
+        <h3 class="card-title text-white  text-uppercase text-center pt-5 ">Erin Airport Limousine
+        </h3>
+        <hr>
+        <h3 class="text-center  text-white">
+            To & From Pearson Airport
+        </h3>
+    </div>
+</div>
+
+<div class="container-fluid airport text-center mb-5">
+
+    <button type="button" class="btn btn-outline-light btn-lg">
+        <a class="text-center" href="/booking">Book Now</a>
+    </button>
+</div>
+
+
+<div class="container-fluid ">
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold ">We offer Airport Limo Services in Erin</h3>
+    </div>
+
+    <figure class='text-center'>
+        <blockquote class="blockquote">
+
+            <!-- <a href='https://www.buttonvilleairport.ca/'>Info </a> -->
+
+        </blockquote>
+
+        <figcaption class="blockquote-footer pt-3">
+            With our limo services your travel to Airport will be hassle free. When you come to a new city you not only
+            look for the
+            good services from limo services providers but also important information which will be useful for you in
+            the new city.
+            So our trained chauffer's will share the important information you need may further. One thing for sure with
+            our limo
+            services your tour will be fun, full comfortable and hassle free.
+
+        </figcaption>
+    </figure>
+
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold "> About Erin</h3>
+    </div>
+
+    <div class="container-fluid">
+        <p class="lead">
+
+            Erin is a town in Wellington County, approximately 80 kilometres northwest of Toronto, Ontario, Canada. Erin is an
+            amalgamated town, composed of the former Villages of Erin and Hillsburgh, and the hamlets of Ballinafad, Brisbane, Cedar
+            Valley, Crewson's Corners, and Orton, as well as the former Township of Erin. Erin is primarily a rural community but,
+            while farming is still an important activity in the town, most of its population works in the nearby cities of Brampton,
+            Mississauga, Guelph, and even Toronto.
+            
+            The Town of Erin is an amalgamated community of 11,830 people in 3,900 households, situated in Wellington County, just
+            northwest of Toronto. We have two urban centres, Erin and Hillsburgh, surrounded by a natural rural area which includes
+            six hamlets: Ballinafad, Brisbane, Cedar Valley, Crewson's Corners, Orton and Ospringe. We are bordered by the Town of
+            Caledon to the east, the Town of Halton Hills to the south, the Township of Guelph/Eramosa to the west and the Township
+            of East Garafraxa to the north.
+
+        </p>
+        <h3 class="text-center fw-bold ">Places to visit</h3>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+
+                <strong>Erin Country Inn & Conference Center</strong>
+                <address> 5483 Wellington Rd. 24 RR 2
+                Erin, ON N0B 1T0
+                </address>
+            </li>
+            <li class="list-inline-item">
+                <strong>David's Restaurant</strong>
+                <address>20 Shamrock Rd., Unit 1
+                Erin, ON N0B 1T0
+
+                </address>
+            </li>
+            <li class="list-inline-item">
+
+                <strong> Delta Guelph Hotel and Conference Centre</strong>
+                <address>
+                50 Stone Road West
+                Guelph, ON N1G 0A91
+
+                </address>
+
+            </li>
+            <li class="list-inline-item">
+
+                <strong>Best Western Royal Brock Hotel and Conference Centre</strong>
+                <address>
+                    716 Gordon Street
+                    Guelph, ON N1G 1Y6
+                </address>
+
+            </li>
+
+
+        </ul>
+
+    </div>
+
+
+
+</div>
+
+<div class="container-fluid row  ">
+    <div class="mt-3 mb-3">
+        <h3 class="text-center fw-bold">Our Fleet</h3>
+    </div>
+
+
+
+    <% limos.forEach(limo=> { %>
+
+        <div class="card col-md w-100">
+            <a href="/limos/<%= limo.id %>">
+
+                <img src="<%= limo.coverImagePath %>" class="card-img" alt="...">
+            </a>
+
+            <div class="card-img-overlay">
+                <h5 class="card-title text-center">
+                    <%= limo.title %>
+                </h5>
+                <!-- <p class="card-text ">
+                 <h6 class="text-center">Price Per Hour: <%= limo.pricePerHour %>$</h6>
+                    <h6 class="text-center">Price Per Day: <%= limo.pricePerDay %>$</h6>
+                    <h6 class="text-center">Airport Transfer: <%= limo.airportTransfer %>$</h6>
+                    </p> -->
+
+            </div>
+        </div>
+
+        <% }) %>
+
+</div>
