@@ -604,4 +604,26 @@ router.get("/northbay", async (req, res) => {
   res.render("northbay-City", { limos: limos });
 });
 
+router.get("/northyork", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("northyork-City", { limos: limos });
+});
+
+router.get("/oakville", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("oakville-City", { limos: limos });
+});
+
 module.exports = router;
