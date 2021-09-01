@@ -4,7 +4,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const express = require("express");
 const router = express.Router();
-const Limo = require("../models/limo");
+//const Limo = require("../models/limo");
 
 const flatpickr = require("flatpickr");
 
@@ -13,25 +13,27 @@ const limo = require("../models/limo");
 sendGridMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 router.get("/", async (req, res) => {
-  let limos;
-  try {
-    limos = await Limo.find();
-  } catch {
-    limos = [];
-  }
-  res.render("index", { limos: limos });
+  // let limos;
+  // try {
+  //   limos = await Limo.find();
+  // } catch {
+  //   limos = [];
+  // }
+  // res.render("index", { limos: limos });
+  res.render("index");
 });
 
 // Ians method for sending mails
 
 router.get("/booking", async (req, res) => {
-  let limos;
-  try {
-    limos = await Limo.find();
-  } catch {
-    limos = [];
-  }
-  res.render("booking", { limos: limos });
+  // let limos;
+  // try {
+  //   limos = await Limo.find();
+  // } catch {
+  //   limos = [];
+  // }
+  //res.render("booking", { limos: limos });
+  res.render("booking");
 });
 
 router.post("/booking", async (req, res) => {
