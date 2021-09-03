@@ -10,7 +10,8 @@ const flatpickr = require("flatpickr");
 
 const sendGridMail = require("@sendgrid/mail");
 const limo = require("../models/limo");
-sendGridMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+// sendGridMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 router.get("/", async (req, res) => {
   // let limos;
