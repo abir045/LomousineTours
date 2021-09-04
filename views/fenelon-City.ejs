@@ -107,34 +107,48 @@ friendliness of the business owners and their dedication to great customer servi
 
 </div>
 
-<div class="container-fluid row  ">
+<div class="container-fluid row">
     <div class="mt-3 mb-3">
         <h3 class="text-center fw-bold">Our Fleet</h3>
     </div>
 
-
-
-    <% limos.forEach(limo=> { %>
-
-        <div class="card col-md w-100">
-            <a href="/limos/<%= limo.id %>">
-
-                <img src="<%= limo.coverImagePath %>" class="card-img" alt="...">
-            </a>
-
+    <div class="card-group">
+        <div class="card">
+            <img src="/images/sedan.jpeg" class="card-img-top" alt="...">
             <div class="card-img-overlay">
-                <h5 class="card-title text-center">
-                    <%= limo.title %>
-                </h5>
-                <!-- <p class="card-text ">
-                 <h6 class="text-center">Price Per Hour: <%= limo.pricePerHour %>$</h6>
-                    <h6 class="text-center">Price Per Day: <%= limo.pricePerDay %>$</h6>
-                    <h6 class="text-center">Airport Transfer: <%= limo.airportTransfer %>$</h6>
-                    </p> -->
+                <h5 class="card-title">Sedan</h5>
+
+            </div>
+
+        </div>
+        <div class="card">
+            <img src="/images/suv.jpeg" class="card-img-top" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title">SUV</h5>
+
+            </div>
+
+        </div>
+        <div class="card">
+            <img src="/images/strechLimo.jpeg" class="card-img-top" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Streched Limo</h5>
 
             </div>
         </div>
 
-        <% }) %>
+        <div class="card">
+            <img src="/images/party.png" class="card-img-top" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Party Bus</h5>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
 
 </div>
