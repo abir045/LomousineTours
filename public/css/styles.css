@@ -236,3 +236,36 @@ div#fp-nav a span {
     opacity: 1;
   }
 }
+
+/* .email {
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+.carousel-caption {
+  width: 150px;
+  z-index: 10;
+  color: #fff;
+  text-align: left;
+  top: 10%;
+  left: 2%;
+  bottom: auto;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+/* .mb{
+  width: 200px;
+  z-index: 10;
+  color: #fff;
+  text-align: left;
+  top: 10%;
+  left: 65%;
+  bottom: auto;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+
+} */

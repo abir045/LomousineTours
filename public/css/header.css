@@ -25,6 +25,9 @@ a:hover {
   font-weight: bold;
   padding-right: 5rem;
 }
+.book {
+  padding-right: 5rem;
+}
 
 .dropdown-item {
   color: azure;
