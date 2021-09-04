@@ -246,8 +246,12 @@ div#fp-nav a span {
 .carousel-caption {
   width: 150px;
   z-index: 10;
+  display: inline-block;
+  /* clear: both; */
+  /* overflow: hidden; */
+  white-space: pre;
   color: #fff;
-  text-align: left;
+  text-align: center;
   top: 15%;
   left: 2%;
   bottom: auto;
