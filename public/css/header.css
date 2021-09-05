@@ -47,3 +47,21 @@ a:hover {
   height: 100px;
   padding-right: 2rem;
 }
+
+.whatsapp {
+  position: fixed;
+  top: 30px;
+  right: 70px;
+}
+
+.sms {
+  position: fixed;
+  top: 30px;
+  right: 120px;
+}
+
+.call {
+  position: fixed;
+  top: 30px;
+  right: 170px;
+}
