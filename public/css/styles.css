@@ -13,8 +13,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
+
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 html {
@@ -24,8 +25,15 @@ html {
 .heading {
   background-color: #282829;
 }
-.container-fluid {
+/* .container-fluid {
   width: 100vw;
+} */
+
+.container-fluid {
+  /* display: block; */
+  width: 100%;
+  /* margin: 0 auto; */
+  border: 0;
 }
 
 /* .bg {
