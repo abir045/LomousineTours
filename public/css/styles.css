@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&family=Mitr:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -54,10 +59,10 @@ html {
   color: #fd7e14;
 }
 
-.card:hover {
+/* .card:hover {
   color: #fd7e14 !important ;
   text-decoration: underline;
-}
+} */
 
 .card-text {
   color: grey;
@@ -273,3 +278,57 @@ div#fp-nav a span {
   transform: translate(0, -50%);
 
 } */
+
+.sacremento {
+  font-family: "Sacramento", cursive;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+}
+
+.qauttrocento {
+  font-family: "Quattrocento", serif;
+  font-size: 700;
+}
+
+.fanwood {
+  font-family: "Fanwood Text", serif;
+}
+
+.almendra {
+  font-family: "Almendra", serif;
+  font-weight: 400;
+}
+
+.mitr {
+  font-family: "Mitr", sans-serif;
+  font-weight: 700;
+}
+
+.lora {
+  font-family: "Lora", serif;
+}
+
+.merriweather {
+  font-family: "Merriweather", serif;
+  font-style: italic;
+}
+
+.pickup {
+  /* border-radius: 10% 30% 50% 70%; */
+  border-radius: 50% 20% / 10% 40%;
+}
+
+.limo-service {
+  border-radius: 30px;
+}
+
+.pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+.dancing {
+  font-family: "Dancing Script", cursive;
+  /* font-weight: 700; */
+}
