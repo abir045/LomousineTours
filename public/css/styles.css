@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&family=Mitr:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
@@ -352,4 +352,26 @@ video {
   position: relative;
   top: 0;
   left: 0;
+}
+
+.btn-outline-light {
+  position: fixed;
+  top: 9.5rem;
+  left: 75%;
+  border-radius: 40px;
+  background: transparent;
+  box-shadow: 10px 5px 15px white;
+  transition: all 0.3s ease 0s;
+
+  /* align-content: center; */
+  z-index: 10;
+}
+
+.btn a {
+  text-decoration: none;
+
+  /* font-family: "Pacifico", cursive; */
+  /* font-weight: 700; */
+  letter-spacing: 1px;
+  line-height: 15px;
 }
