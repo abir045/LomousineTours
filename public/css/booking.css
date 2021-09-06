@@ -122,7 +122,7 @@ div#fp-nav a span {
 }
 
 .direction:hover {
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
   background-color: transparent;
 }
 
