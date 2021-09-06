@@ -351,11 +351,11 @@ video {
 
 .direction {
   position: absolute;
-  top: 35%;
+  top: 40%;
   /* left: 10%; */
   color: #000;
   border-radius: 40px;
-  /* background: #2193b0; */
+
   box-shadow: 10px 5px 15px white;
   transition: all 0.3s ease 0s;
 }
