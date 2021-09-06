@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&family=Mitr:wght@400;700&display=swap");
+
+.almendra {
+  font-family: "Almendra", serif;
+  font-weight: 400;
+}
+
+#googleMap {
+  width: 100%;
+  height: 400px;
+  margin: 20px auto;
+}
+
+.credit {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
+    1px 1px 2px #555;
+  backdrop-filter: blur(0.8rem);
+  /* padding: 1.5rem; */
+  border-radius: 1rem;
+  animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
+}
+
+.card__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__title {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #1d005f;
+  margin: 1rem 0 1.5rem;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card__input {
+  background: none;
+  border: none;
+  border-bottom: dashed 0.2rem rgba(255, 255, 255, 0.15);
+  font-size: 1.2rem;
+  color: #000;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+.card__input--large {
+  font-size: 1rem;
+}
+
+.card__input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  text-shadow: none;
+}
+
+.card__input:focus {
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.card__label {
+  display: flex;
+  color: #000;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+}
+
+.card__chip {
+  align-self: flex-end;
+}
+
+.card__chip img {
+  max-width: 1.5rem;
+}
+
+.card__brand {
+  font-size: 2rem;
+  color: #000;
+  width: 100px;
+  display: flex;
+  /* max-height: 75px; */
+  text-align: right;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+div#fp-nav a span {
+  background: #fff !important;
+}
+@keyframes cardEnter {
+  from {
+    transform: translateY(50vh);
+    opacity: 0.1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.booking-page {
+  /* margin-top: 2rem; */
+  /* display: grid; */
+  display: flex;
+  justify-content: center;
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);
+}
+
+.direction {
+  position: absolute;
+  top: 37%;
+  background-color: #2193b0;
+  color: #000;
+  border-radius: 20px;
+  box-shadow: 10px 5px 15px white;
+  transition: all 0.3s ease 0s;
+  z-index: 10;
+}
+
+.direction:hover {
+  transform: translateY(-5px);
+  background-color: transparent;
+}
+
+.dropdown {
+  max-width: 100%;
+}
