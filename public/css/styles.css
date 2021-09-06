@@ -356,7 +356,7 @@ video {
 
 .btn-outline-light {
   position: fixed;
-  top: 9.5rem;
+  top: 10.5rem;
   left: 75%;
   border-radius: 40px;
   background: transparent;
@@ -365,6 +365,13 @@ video {
 
   /* align-content: center; */
   z-index: 10;
+}
+
+.btn-outline-light:hover {
+  background-color: #00ffd9;
+  /* box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4); */
+  color: #fff;
+  transform: translateY(-7px);
 }
 
 .btn a {
