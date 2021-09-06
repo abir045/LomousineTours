@@ -28,8 +28,6 @@ html {
 
 .container-fluid {
   width: 100%;
-
-  border: 0;
 }
 
 .services {
@@ -327,4 +325,41 @@ video {
   /* font-weight: 700; */
   letter-spacing: 1px;
   line-height: 15px;
+}
+
+.booking-page {
+  /* margin-top: 2rem; */
+  /* display: grid; */
+  display: flex;
+  justify-content: center;
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /* border: 1px solid black; */
+  /* box-shadow: 2px 2px 0px 10px #555; */
+  /* box-sizing: border-box; */
+}
+
+.direction {
+  position: absolute;
+  top: 35%;
+  /* left: 10%; */
+  color: #000;
+  border-radius: 40px;
+  /* background: #2193b0; */
+  box-shadow: 10px 5px 15px white;
+  transition: all 0.3s ease 0s;
+}
+
+.direction:hover {
+  background-color: #2193b0;
 }

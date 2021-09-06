@@ -1,33 +1,32 @@
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" />
 
 
 
-<div class="container-fluid mr-5 mt-5">
-        
-        <div class="col-md-2">
-            <button class='btn btn-info btn-lg'   onclick="calcRoute();">
-           <i class='fas fa-directions'>Click Here to View Route on Map</i>
-            </button>
-        </div>
-       
+<div class="container-fluid  booking-page g-3">
+
+    <div class="col-md-2">
+        <button class='btn btn-outline-light  direction' onclick="calcRoute();">
+            <i class='fas fa-directions text-white'>Click to view Route </i>
+        </button>
+    </div>
 
         <form class="form-floating" action="/booking" method='POST' id='form-data'>
 
-            <div class="row g-0  mb-5">
+            <div class="row g-1  mb-5">
                 <div class="col-md-3 ">
                     <div class="form-floating ">
-                        <input type='text' id='from' placeholder="From" class='form-control' name='from' value=""
+                        <input type='text' id='from'  placeholder="From" class='form-control' name='from' value=""
                             required>
-                        <label class="fw-bold fs-5" id='details' for="floatingInputGrid"> Pick Up Location</label>
+                        <label class="fw-bold fs-5 almendra" id='details' for="floatingInputGrid"> Pick Up Location</label>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="form-floating">
                         <input type="text" id='to' placeholder="Destination" class="form-control" name='to' value="">
-                        <label class="fw-bold fs-5" for="floatingInputGrid">Drop off Destination</label>
+                        <label class="fw-bold fs-5 almendra" for="floatingInputGrid">Drop off Destination</label>
 
                     </div>
                 </div>
@@ -57,47 +56,40 @@
 
         
                 
-                <div class="col-md-2">
-                    <label for='date'>Pickup Date and Time</label>
+                <div class="col-md-2 g-3">
+                    <label class="text-white almendra" for='date'>Pickup Date and Time</label>
                 
-                    <input type="number" id="basicDate" placeholder="Please select Date Time" name='pickupDate' data-input>
+                    <input class="" type="number" id="basicDate" placeholder="Please select Date Time" name='pickupDate' data-input>
                 
                 </div>
-                <div class="col-md-3">
-                    <label for='name'> Name</label>
+                <div class="col-md-3 g-3">
+                    <label class="text-white almendra" for='name'> Name</label>
                     <input type='text' id='name' name='name'>
                 </div>
-                <div class="col-md-2">
-                    <label for='email'>Email</label>
-                    <input type='email' id='email' name='email'>
+                <div class="col-md-2 g-3">
+                    <label class="text-white almendra" for='email'>Email</label>
+                    <input class="text-white almendra" type='email' id='email' name='email'>
 
                 </div>
-                <div class="col-md-2">
-                    <label for='phone'>Phone</label>
+                <div class="col-md-2 g-3">
+                    <label class="text-white almendra" for='phone'>Phone</label>
                     <input type='number' id='phone' name='phone'>
 
                 </div>
 
-                <div class="col-md-2 dropdown">
+                <div class="col-md-2 dropdown g-3">
                     <div class="form-floating">
-                        <button class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        <button class="btn btn-light btn-sm dropdown-toggle almendra" href="#" role="button" id="dropdownMenuLink"
                             data-bs-toggle="dropdown" aria-expanded="true">
                             Select Limo Type
                         </button>
                       
                 
-                        <ul class="dropdown" aria-labelledby="dropdownMenuLink">
-                        <!-- <select id='social' name='limo' style='width: 300px;'>
-                             <option  value='sedan' >Sedan</option>
-                            <option  value='suv' >SUV</option>
-                            <option  value='strechLimo' >Long Limo</option>
-                            <option  value='partyBus' >Party Bus </option>
-                            
-                        </select>  -->
+                        <ul class="dropdown g-3 " aria-labelledby="dropdownMenuLink">
 
-                        <select  name='limo' style='width: 300px;'>
-                            <option id="SEDAN">Sedan: Minimum Fair 65$</option>
-                            <option id='SUV' >SUV: Minimum Fair 85$</option>
+                        <select  name='limo' style='width: 400px;'>
+                            <option id="SEDAN" class="almendra">Sedan: Minimum Fair 65$</option>
+                            <option id='SUV' class="almendra" >SUV: Minimum Fair 85$</option>
                             <!-- <option id ='Slimo' >Long Limo Minimum Fair 95$</option> -->
                             <!-- <option id='partyBus' >Party Bus Minimum Fair 115$ </option> -->
                         
@@ -111,148 +103,152 @@
                     </div> -->
                 </div>
 
+                        <div class="row g-1 mb-5">
+                            <div class="col-md-4">
+                        
+                                <label class="text-white almendra" for='payment'>Card Info</label>
+                        
+                                <div class="card credit  ">
+                                    <img src="/images/visa-master-icon-28.jpg" class="img-fluid" alt="..." style="height:300px;">
+                        
+                                    <div class="card-img-overlay">
+                                        <!-- <h3 class="card__title">Enter Payment Information</h3> -->
+                        
+                                        <label for="cardHolder" class="card__label almendra">Card Holder Name</label>
+                                        <input type="text" class="card__input card__input--large" id="cardHolder" placeholder=""
+                                            name='cardHolder' />
+                        
+                                        <label for="cardNumber" class="card__label almendra">Card Number</label>
+                                        <input type="text" class="card__input card__input--large" id="cardNumber"
+                                            placeholder="xxxx-xxxx-xxxx-xxxx" name='cardNumber' />
+                        
+                        
+                                        <label for="cardExpiry" class="card__label almendra">Expiry Date</label><input type="text" class="card__input"
+                                            id="cardExpiry" placeholder="xx/xx" name='expiryDate' />
+                                        <label for="cardCcv" class="card__label almendra">CCV</label><input type="text" class="card__input" id="cardCcv"
+                                            placeholder="xxx" name='cardCcv' />
+                        
+                                        <div class="card__brand"><i id="cardBrand"></i></div>
+                                        <div class="col-md card__chip">
+                                            <img src="/images/chip.svg" alt="chip" />
+                                        </div>
+                                        <!-- </div>  -->
+                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="col-md-2 g-3">
+                                <div class="form-floating">
+                                    <select class="form-select" id="childSeat" name='childSeat' aria-label="Floating label select example">
+                                        <optgroup label='yes'>
+                                        <optgroup label='Infant'>
+                                            <option value='Infant: 1'>1</option>
+                                            <option value='Infant: 2'>2</option>
+                                            <option value='Infant: 3'>3</option>
+                                        </optgroup>
+                                        <optgroup label='Toddler'>
+                                            <option value='Toddler: 1'>1</option>
+                                            <option value='Toddler: 2'>2</option>
+                                            <option value='Toddler: 3'>3</option>
+                                        </optgroup>
+                                        <optgroup label='Booster'>
+                                            <option value='Booster: 1'>1</option>
+                                            <option value='Booster: 2'>2</option>
+                                            <option value='Booster: 3'>3</option>
+                                        </optgroup>
+                        
+                        
+                        
+                                        </optgroup>
+                                        <option value="no">no</option>
+                                    </select>
+                                    <label class="fw-bold fs-5 almendra" for="floatingSelectGrid">Child Seat</label>
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="col-md-2 g-3">
+                                <div class="form-floating">
+                                    <select class="form-select" id="people" name='people' aria-label="Floating label select example">
+                                        <option selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                    </select>
+                                    <label class="fw-bold fs-5 almendra" for="floatingSelectGrid">People</label>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 g-3">
+                                <div class="form-floating">
+                                    <select class="form-select" id="bags" name='bags' aria-label="Floating label select example">
+                                        <option selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                        
+                                    </select>
+                                    <label class="fw-bold fs-5 almendra" for="floatingSelectGrid">Bags</label>
+                                </div>
+                        
+                            </div>
+                        
+                        
+                        
+                        
+                            <div class="row g-1 mb-5">
+                                <div class="col-md-3">
+                        
+                                    <!-- <button type='button' class='btn btn-warning prev'>Prev</button> -->
+                                    <button type='submit' class='btn btn-success submit text-white almendra'>Book </button>
+                        
+                                </div>
+                        
+                        
+                            </div>
+                        
+                        
+                        
+                        
+                            </form>
+
+                         
+                        
+                        
+                        </div>
+
             </div>
              
             
-            <div class="row g-1 mb-5">
-                <div class="col-md-4">
-
-                    <label for='payment'>Card Info</label>
-                   
-                    <div class="card credit  ">
-                        <img src="/images/visa-master-icon-28.jpg" class="img-fluid" alt="..." style="height:300px;">
-
-                        <div class="card-img-overlay">
-                            <!-- <h3 class="card__title">Enter Payment Information</h3> -->
-                            
-                            <label for="cardHolder" class="card__label">Card Holder Name</label>
-                            <input type="text" class="card__input card__input--large" id="cardHolder" placeholder=""
-                                name='cardHolder' />
-                              
-                            <label for="cardNumber" class="card__label">Card Number</label>
-                            <input type="text" class="card__input card__input--large" id="cardNumber"
-                                placeholder="xxxx-xxxx-xxxx-xxxx" name='cardNumber' />
-
-                            
-                            <label for="cardExpiry" class="card__label">Expiry Date</label><input type="text"
-                                class="card__input" id="cardExpiry" placeholder="xx/xx" name='expiryDate' />
-                            <label for="cardCcv" class="card__label">CCV</label><input type="text" class="card__input"
-                                id="cardCcv" placeholder="xxx" name='cardCcv' />
-
-                            <div class="card__brand"><i id="cardBrand"></i></div>
-                            <div class="col-md card__chip">
-                                <img src="/images/chip.svg" alt="chip" />
-                            </div>
-                            <!-- </div>  -->
-
-                        </div>
-                    </div>
-                </div>
-
-
-          
-
-
-
-                <div class="col-md-2">
-                    <div class="form-floating">
-                        <select class="form-select" id="childSeat" name='childSeat' aria-label="Floating label select example" >
-                            <optgroup label='yes'>
-                            <optgroup label='Infant'>
-                                <option value='Infant: 1'>1</option>
-                                <option value='Infant: 2'>2</option>
-                                <option value='Infant: 3'>3</option>
-                                </optgroup>
-                                <optgroup label='Toddler'>
-                            <option value='Toddler: 1'>1</option>
-                            <option value='Toddler: 2'>2</option>
-                            <option value='Toddler: 3'>3</option>
-                                </optgroup>
-                                <optgroup label='Booster'>
-                                    <option value='Booster: 1'>1</option>
-                                    <option value='Booster: 2'>2</option>
-                                    <option value='Booster: 3'>3</option>
-                                </optgroup>
-                            
-                            
-
-                            </optgroup>
-                            <option value="no">no</option>
-                        </select>
-                        <label class="fw-bold fs-5" for="floatingSelectGrid">Child Seat</label>
-                    </div>
-                
-                </div>
-
-                <div class="col-md-2">
-                    <div class="form-floating">
-                        <select class="form-select" id="people" name='people' aria-label="Floating label select example">
-                            <option selected>1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                        </select>
-                        <label class="fw-bold fs-5" for="floatingSelectGrid">People</label>
-                    </div>
-                </div>
-
-                <div class="col-md-2">
-                    <div class="form-floating">
-                        <select class="form-select" id="bags" name='bags' aria-label="Floating label select example">
-                            <option selected>1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                
-                        </select>
-                        <label class="fw-bold fs-5" for="floatingSelectGrid">Bags</label>
-                    </div>
-                
-                </div>
-
-
-               
-
-            <div class="row g-1 mb-5">
-                <div class="col-md-3">
-                
-                    <!-- <button type='button' class='btn btn-warning prev'>Prev</button> -->
-                    <button type='submit' class='btn btn-success submit'>Book </button>
-                
-                </div>
-
-
-            </div>
-
-
-
-    
-    </form>
-
   
-    </div>
 
 
 
@@ -292,7 +288,7 @@
 
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
 
 <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPVTJqtbtQxwLaBcdwGIv56MuSSJqXXoY&libraries=places">
