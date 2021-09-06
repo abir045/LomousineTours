@@ -25,20 +25,12 @@ html {
 .heading {
   background-color: #282829;
 }
-/* .container-fluid {
-  width: 100vw;
-} */
 
 .container-fluid {
-  /* display: block; */
   width: 100%;
-  /* margin: 0 auto; */
+
   border: 0;
 }
-
-/* .bg {
-  width: 100%;
-} */
 
 .services {
   z-index: 9;
@@ -71,11 +63,6 @@ html {
   color: #fd7e14;
 }
 
-/* .card:hover {
-  color: #fd7e14 !important ;
-  text-decoration: underline;
-} */
-
 .card-text {
   color: grey;
 }
@@ -91,11 +78,6 @@ html {
   justify-content: center;
   z-index: 4;
 }
-
-/* .promise {
-  position: absolute;
-  top: 15%;
-} */
 
 .whatsapp {
   position: fixed;
@@ -122,21 +104,11 @@ hr {
   height: 20px;
   width: 60%;
   margin: auto;
-
   border: 3px solid white;
 }
 
 .dropdown {
   max-width: 100%;
-  /* background-color: white; */
-}
-
-.step {
-  display: none;
-}
-
-.step.active {
-  display: flex;
 }
 
 .form-group {
@@ -188,10 +160,6 @@ ul {
   margin: 1rem 0 1.5rem;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
-
-/* .card-col {
-  padding-right: 1rem;
-} */
 
 .card__input {
   background: none;
@@ -254,18 +222,10 @@ div#fp-nav a span {
   }
 }
 
-/* .email {
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-
 .carousel-caption {
   width: 80px;
   z-index: 10;
   display: inline-block;
-  /* clear: both; */
-  /* overflow: hidden; */
   white-space: pre;
   color: #fff;
   text-align: center;
@@ -276,20 +236,6 @@ div#fp-nav a span {
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-
-/* .mb{
-  width: 200px;
-  z-index: 10;
-  color: #fff;
-  text-align: left;
-  top: 10%;
-  left: 65%;
-  bottom: auto;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-
-} */
 
 .sacremento {
   font-family: "Sacramento", cursive;
@@ -368,7 +314,7 @@ video {
 }
 
 .btn-outline-light:hover {
-  background-color: #00ffd9;
+  background-color: white;
   /* box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4); */
   color: #fff;
   transform: translateY(-7px);
