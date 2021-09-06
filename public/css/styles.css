@@ -301,9 +301,9 @@ video {
 }
 
 .btn-outline-light {
-  position: fixed;
-  top: 10.5rem;
-  left: 75%;
+  position: relative;
+  top: 5rem;
+  left: 45%;
   border-radius: 40px;
   background: transparent;
   box-shadow: 10px 5px 15px white;
