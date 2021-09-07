@@ -122,10 +122,10 @@ div#fp-nav a span {
   z-index: 10;
 }
 
-.direction:hover {
+/* .direction:hover {
   background-color: transparent;
-  transform: scale(0.8);
-}
+  transform: translateY(-5px);
+} */
 
 .dropdown {
   max-width: 100%;
