@@ -112,6 +112,7 @@ div#fp-nav a span {
 
 .direction {
   position: absolute;
+  left: 2%;
   top: 45%;
   background-color: #2193b0;
   color: #000;
