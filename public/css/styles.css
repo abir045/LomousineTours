@@ -30,7 +30,7 @@ html {
   width: 100%;
 }
 
-.services {
+/* .services {
   z-index: 9;
   position: absolute;
   top: 30%;
@@ -38,24 +38,24 @@ html {
 
   font-size: 18px;
   font-weight: bold;
-}
+} */
 
 .form-input {
   display: flex;
   justify-content: center;
 }
 
-.details {
+/* .details {
   display: flex;
 
   z-index: 9;
   position: absolute;
   top: 90%;
-}
+} */
 
-.info {
+/* .info {
   position: center;
-}
+} */
 
 .offers {
   color: #fd7e14;
