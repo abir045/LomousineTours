@@ -122,8 +122,8 @@ div#fp-nav a span {
 }
 
 .direction:hover {
-  /* transform: translateY(-5px); */
   background-color: transparent;
+  transform: translateY(-5px);
 }
 
 .dropdown {
