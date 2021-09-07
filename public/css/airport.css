@@ -116,3 +116,11 @@ div h3 {
 div h5 {
   font-family: "Almendra", serif;
 }
+
+li strong {
+  font-family: "Almendra", serif;
+}
+
+li address {
+  font-family: "Oswald", sans-serif;
+}
