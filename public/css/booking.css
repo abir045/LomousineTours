@@ -117,7 +117,7 @@ div#fp-nav a span {
   color: #000;
   border-radius: 20px;
   box-shadow: 10px 5px 15px white;
-  transition: all 0.3s ease 0s;
+  /* transition: all 0.3s ease 0s; */
   z-index: 10;
 }
 
