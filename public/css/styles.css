@@ -79,20 +79,20 @@ html {
 
 .whatsapp {
   position: fixed;
-  top: 30px;
-  right: 70px;
+  top: 2.8rem;
+  right: 5rem;
 }
 
 .sms {
   position: fixed;
-  top: 30px;
-  right: 120px;
+  top: 2.8rem;
+  right: 7.5rem;
 }
 
 .call {
   position: fixed;
-  top: 30px;
-  right: 170px;
+  top: 2.8rem;
+  right: 10.625rem;
 }
 
 .time {
@@ -215,7 +215,7 @@ video {
 .btn-outline-light:hover {
   background-color: white;
   color: #fff;
-  transform: translateY(-5px);
+  transform: translateY(5px);
 }
 
 .btn a {
