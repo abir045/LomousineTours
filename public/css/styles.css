@@ -40,10 +40,10 @@ html {
   font-weight: bold;
 } */
 
-.form-input {
+/* .form-input {
   display: flex;
   justify-content: center;
-}
+} */
 
 /* .details {
   display: flex;
@@ -57,25 +57,25 @@ html {
   position: center;
 } */
 
-.offers {
+/* .offers {
   color: #fd7e14;
-}
+} */
 
-.card-text {
+/* .card-text {
   color: grey;
-}
+} */
 
-.vehicles {
-  margin: 0 auto; /* Added */
-  float: left; /* Added */
-  margin-bottom: 10px; /* Added */
-}
+/* .vehicles {
+  margin: 0 auto; 
+  float: left; 
+  margin-bottom: 10px; 
+} */
 
-.calculator {
+/* .calculator {
   align-items: center;
   justify-content: center;
   z-index: 4;
-}
+} */
 
 .whatsapp {
   position: fixed;
@@ -105,20 +105,20 @@ hr {
   border: 3px solid white;
 }
 
-.dropdown {
+/* .dropdown {
   max-width: 100%;
-}
+} */
 
-.form-group {
+/* .form-group {
   width: 100%;
   padding: 5px;
   margin-top: 10px;
   border-radius: 4px;
-}
+} */
 
-div#fp-nav a span {
+/* div#fp-nav a span {
   background: #fff !important;
-}
+} */
 
 ul {
   list-style-type: none;
