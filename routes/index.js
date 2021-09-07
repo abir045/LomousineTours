@@ -289,6 +289,17 @@ router.get("/billy-bishop-airport", async (req, res) => {
   res.render("billy-bishop", { limos: limos });
 });
 
+router.get("/hamilton-airport", async (req, res) => {
+  let limos;
+  try {
+    limos = await Limo.find();
+  } catch {
+    limos = [];
+  }
+
+  res.render("hamilton-airport", { limos: limos });
+});
+
 router.get("/niagara-falls-airport", async (req, res) => {
   let limos;
   try {

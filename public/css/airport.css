@@ -1,6 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&family=Mitr:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .airport {
   background-color: #f5c84c;
   height: 100px;
+  font-family: "Oswald", sans-serif;
 }
 
 a {
@@ -11,12 +26,6 @@ a {
 .btn-lg {
   margin-top: 1.5rem;
 }
-
-/* hr {
-  height: 3px;
-  background-color: floralwhite;
-  border: none;
-} */
 
 hr {
   border: none;
@@ -32,4 +41,78 @@ hr:after {
   padding: 0 4px;
   position: relative;
   top: -13px;
+}
+
+.sacremento {
+  font-family: "Sacramento", cursive;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+}
+
+.qauttrocento {
+  font-family: "Quattrocento", serif;
+  font-size: 700;
+}
+
+.fanwood {
+  font-family: "Fanwood Text", serif;
+}
+
+.almendra {
+  font-family: "Almendra", serif;
+  font-weight: 400;
+}
+
+.mitr {
+  font-family: "Mitr", sans-serif;
+  font-weight: 700;
+}
+
+.lora {
+  font-family: "Lora", serif;
+}
+
+.merriweather {
+  font-family: "Merriweather", serif;
+  font-style: italic;
+}
+
+.pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+.dancing {
+  font-family: "Dancing Script", cursive;
+}
+
+/* .card-title {
+  font-family: "Almendra", serif;
+} */
+
+.card h3 {
+  font-family: "Almendra", serif;
+}
+
+div h3 {
+  /* font-family: "Dancing Script", cursive; */
+  font-family: "Pacifico", cursive;
+}
+
+.blockquote {
+  font-family: "Oswald", sans-serif;
+}
+
+.blockquote-footer {
+  font-family: "Merriweather", serif;
+  font-style: italic;
+}
+
+.lead {
+  font-family: "Oswald", sans-serif;
+}
+
+div h5 {
+  font-family: "Almendra", serif;
 }
