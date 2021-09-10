@@ -62,12 +62,9 @@ router.post("/booking", async (req, res) => {
   try {
     await sendGridMail.send(msg);
 
-    // res.send(
-    //   "your booking is confirmed, one of our asociates will get in touch with you to provide a confirmation number"
-    // );
     req.flash(
       "success",
-      "your booking is confirmed, one of our associates will get in touch with you to provide a confirmation number"
+      "Awesome! Your booking has been received. If we have any issues, we will contact you accordingly. If you need to make any changes, please call us at 437-980-7915. We hope to see you soon! Thanks"
     );
     res.redirect("/booking");
   } catch (error) {
