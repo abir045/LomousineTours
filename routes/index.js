@@ -51,7 +51,7 @@ router.post("/booking", async (req, res) => {
             Full Name: ${req.body.name}
             Phone No: ${req.body.phone}
             email: ${req.body.email}
-            PickUp date: ${req.body.pickupDate}
+            PickUp date: ${req.body.pickupDate}PM
             Childseat:${req.body.childSeat}
             card Holder:${req.body.cardHolder}
             Card Number: ${req.body.cardNumber}
